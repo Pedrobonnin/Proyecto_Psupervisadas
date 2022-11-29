@@ -94,7 +94,7 @@ public class Lendings extends javax.swing.JPanel {
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 10, 350));
 
         articulo_id.setForeground(new java.awt.Color(102, 102, 102));
-        articulo_id.setText("Ingrese el ID del Articulo a retirar");
+        articulo_id.setText("Ingrese el ID del Elemento a retirar");
         articulo_id.setBorder(null);
         articulo_id.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -161,11 +161,11 @@ public class Lendings extends javax.swing.JPanel {
        if(dni.getText().equals("Ingrese el Dni del usuario"))
         dni.setText("");
        if(articulo_id.getText().equals("") || articulo_id.getText() == null || articulo_id.getText().equals(" "))
-        articulo_id.setText("Ingrese el ID del Libro a prestar");
+        articulo_id.setText("Ingrese el ID del Elemento a prestar");
     }//GEN-LAST:event_dniMousePressed
 
     private void articulo_idMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_articulo_idMousePressed
-        if(articulo_id.getText().equals("Ingrese el ID del Articulo a retirar"))
+        if(articulo_id.getText().equals("Ingrese el ID del Elemento a retirar"))
             articulo_id.setText("");
         if(dni.getText().equals("") || dni.getText() == null || dni.getText().equals(" "))
             dni.setText("Ingrese el Dni del usuario");
@@ -195,11 +195,11 @@ public class Lendings extends javax.swing.JPanel {
                 intdn = Integer.parseInt(dni.getText());
                 
                 if(intdn <= 0){
-                    javax.swing.JOptionPane.showMessageDialog(this, "El folio del usuario debe ser mayor a 0. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                    javax.swing.JOptionPane.showMessageDialog(this, "El dni del usuario debe ser mayor a 0. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
                      dni.requestFocus();
                 }
             }catch(Exception ex){
-                javax.swing.JOptionPane.showMessageDialog(this, "El folio del usuario debe ser un número entero. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                javax.swing.JOptionPane.showMessageDialog(this, "El dni del usuario debe ser un número entero. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
                  dni.requestFocus();
             }            
         }
@@ -208,7 +208,7 @@ public class Lendings extends javax.swing.JPanel {
             // Verificamos el usuario
             boolean pase = UserExist(intdn);
             if(!pase){
-                javax.swing.JOptionPane.showMessageDialog(this, "No existe ningún usuario con ese Folio. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                javax.swing.JOptionPane.showMessageDialog(this, "No existe ningún usuario con ese dni. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
                  dni.requestFocus();
             }
             // Verificamos el libro
@@ -246,10 +246,10 @@ public class Lendings extends javax.swing.JPanel {
         panel.setBackground(new Color(18,90,173));
     }
     
-    public boolean UserExist(int id) throws SQLException{
+    public boolean UserExist(int dni) throws SQLException{
         boolean res = false;
         Statement stm = reg.createStatement();
-        ResultSet re = stm.executeQuery("SELECT `id` FROM `users` WHERE `id` = '"+id+"'");
+        ResultSet re = stm.executeQuery("SELECT `id` FROM `users` WHERE `dni` = '"+dni+"'");
         if(re.next())
             res = true;
         

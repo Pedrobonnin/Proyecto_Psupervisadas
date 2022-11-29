@@ -205,7 +205,7 @@ public class Reports extends javax.swing.JPanel {
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
         list,
         new String [] {
-            "User ID", "Articulo ID", "Fecha de Salida", "Fecha de Entrega"
+            "User Dni", "Articulo ID", "Fecha de Salida", "Fecha de Entrega"
         }));
     }
 

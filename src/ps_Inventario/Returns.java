@@ -178,7 +178,7 @@ public class Returns extends javax.swing.JPanel {
                 intdn = Integer.parseInt(dni.getText());
                 
                 if(intdn <= 0){
-                    javax.swing.JOptionPane.showMessageDialog(this, "El folio del usuario debe ser mayor a 0. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                    javax.swing.JOptionPane.showMessageDialog(this, "El dni del usuario debe ser mayor a 0. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
                      dni.requestFocus();
                 }
                 
@@ -186,7 +186,7 @@ public class Returns extends javax.swing.JPanel {
                     // Verificamos el usuario
                     boolean pase = Inter.UserExist(intdn);
                     if(!pase){
-                        javax.swing.JOptionPane.showMessageDialog(this, "No existe ningún usuario con ese Folio. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                        javax.swing.JOptionPane.showMessageDialog(this, "No existe ningún usuario con ese dni. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
                          dni.requestFocus();
                     }
                     // Verificamos el libro

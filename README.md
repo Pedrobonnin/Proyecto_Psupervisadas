@@ -1,6 +1,4 @@
-# ITPLibrary
-Basic system for managing a library on Java. It's a school project that I did for Object Oriented Programming. Programmed in Java.
-
+# Practicas Supervisadas
 ## Features
 ✔️ Graphic interface with Material Design style.\
 ✔️ Management of Leagues, Tournaments, Journeys, Teams, Coaches, Referees and Players.\
@@ -9,6 +7,7 @@ Basic system for managing a library on Java. It's a school project that I did fo
 ✔️ Penalties for late returns.\
 ✔️ Movement logs.\
 ✔️ Lookup tables.
+✔️ Pedro Bonnin.
 
 ## Previews
 
@@ -29,4 +28,4 @@ Basic system for managing a library on Java. It's a school project that I did fo
 Import the java project in your preferred IDE and import the database. Just edit the class `Connect.class` with your database connection credentials.
 
 ### Important
-Consider download the [mysql-connector-java-5.1.13](http://www.java2s.com/Code/JarDownload/mysql/mysql-connector-java-5.1.13.jar.zip) and import it to the project before compiling.
+Consider download the [sqlit-connector-java-5.1.13](http://www.java2s.com/Code/JarDownload/mysql/mysql-connector-java-5.1.13.jar.zip) and import it to the project before compiling.
