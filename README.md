@@ -1,13 +1,10 @@
 # Practicas Supervisadas
 ## Features
-✔️ Graphic interface with Material Design style.\
-✔️ Management of Leagues, Tournaments, Journeys, Teams, Coaches, Referees and Players.\
-✔️ MySQL database connection.\
-✔️ Management of books, loans and returns.\
-✔️ Penalties for late returns.\
-✔️ Movement logs.\
-✔️ Lookup tables.
-✔️ Pedro Bonnin.
+✔️ Interfaz gráfica con estilo Material Design.\
+✔️ Conexión a la base de datos SQLite.\
+✔️ Gestión de Elemento de cosina, préstamos y devoluciones.\
+✔️ Registros de movimiento.\
+✔️ Tablas de consulta.
 
 ## Previews
 
@@ -24,8 +21,7 @@
   </kbd>
 </p>
 
-## Getting Started
-Import the java project in your preferred IDE and import the database. Just edit the class `Connect.class` with your database connection credentials.
+
 
 ### Important
-Consider download the [sqlit-connector-java-5.1.13](http://www.java2s.com/Code/JarDownload/mysql/mysql-connector-java-5.1.13.jar.zip) and import it to the project before compiling.
+Consider download the [sqlit-connector-java-5.1.13](https://jar-download.com/artifacts/org.xerial/sqlite-jdbc/3.8.11.2/source-code) and import it to the project before compiling.
