@@ -54,6 +54,7 @@ public class Users extends javax.swing.JPanel {
         usrnm = new javax.swing.JTextField();
         search = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         delete = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         edit = new javax.swing.JPanel();
@@ -63,7 +64,7 @@ public class Users extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(238, 238, 238));
         setMinimumSize(new java.awt.Dimension(750, 430));
         setPreferredSize(new java.awt.Dimension(750, 430));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -80,6 +81,7 @@ public class Users extends javax.swing.JPanel {
         jSeparator2.setPreferredSize(new java.awt.Dimension(250, 10));
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 620, 10));
 
+        usrnm.setBackground(new java.awt.Color(238, 238, 238));
         usrnm.setForeground(new java.awt.Color(102, 102, 102));
         usrnm.setText("Ingrese el nombre de usuario a buscar");
         usrnm.setBorder(null);
@@ -94,6 +96,7 @@ public class Users extends javax.swing.JPanel {
         add(usrnm, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 620, 30));
 
         search.setBackground(new java.awt.Color(18, 90, 173));
+        search.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         search.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         search.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -108,15 +111,18 @@ public class Users extends javax.swing.JPanel {
         });
         search.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Buscar");
-        search.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, -1));
+        search.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
 
-        add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 40, 80, 30));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Sin título-1.png"))); // NOI18N
+        search.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 5, 30, 20));
 
-        delete.setBackground(new java.awt.Color(18, 90, 173));
+        add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 40, 90, 30));
+
+        delete.setBackground(new java.awt.Color(153, 9, 0));
         delete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         delete.setAutoscrolls(true);
         delete.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -139,9 +145,9 @@ public class Users extends javax.swing.JPanel {
         jLabel1.setText("Borrar");
         delete.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 60, 20));
 
-        add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 395, 80, 30));
+        add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 400, 80, 30));
 
-        edit.setBackground(new java.awt.Color(18, 90, 173));
+        edit.setBackground(new java.awt.Color(5, 115, 0));
         edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         edit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         edit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -163,7 +169,7 @@ public class Users extends javax.swing.JPanel {
         jLabel2.setText("Editar");
         edit.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
 
-        add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 395, 80, -1));
+        add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 80, -1));
 
         nuevo.setBackground(new java.awt.Color(18, 90, 173));
         nuevo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -188,14 +194,21 @@ public class Users extends javax.swing.JPanel {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Nuevo");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel3MouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jLabel3MousePressed(evt);
             }
         });
         nuevo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, 30));
 
-        add(nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 395, 80, 30));
+        add(nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 80, 30));
 
+        jTable1.setBackground(new java.awt.Color(238, 238, 238));
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -218,7 +231,7 @@ public class Users extends javax.swing.JPanel {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre", "Apellido P.", "Dni", "Domicilio", "Teléfono"
+                "ID", "Nombre", "Apellido", "Dni", "Domicilio", "Teléfono"
             }
         ) {
             Class[] types = new Class [] {
@@ -256,35 +269,35 @@ public class Users extends javax.swing.JPanel {
     }//GEN-LAST:event_usrnmMousePressed
 
     private void deleteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseEntered
-        setColor(delete);
+        setColorEliminar(delete);
     }//GEN-LAST:event_deleteMouseEntered
 
     private void deleteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseExited
-        resetColor(delete);
+        resetColorEliminar(delete);
     }//GEN-LAST:event_deleteMouseExited
 
     private void editMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editMouseEntered
-        // TODO add your handling code here:
+        setColorEditar(edit);
     }//GEN-LAST:event_editMouseEntered
 
     private void editMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editMouseExited
-        // TODO add your handling code here:
+        resetColorEditar(edit);
     }//GEN-LAST:event_editMouseExited
 
     private void nuevoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nuevoMouseEntered
-        // TODO add your handling code here:
+        setColorNuevo(nuevo);
     }//GEN-LAST:event_nuevoMouseEntered
 
     private void nuevoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nuevoMouseExited
-        // TODO add your handling code here:
+        resetColorNuevo(nuevo);
     }//GEN-LAST:event_nuevoMouseExited
 
     private void searchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchMouseEntered
-        // TODO add your handling code here:
+        setColorNuevo(search);
     }//GEN-LAST:event_searchMouseEntered
 
     private void searchMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchMouseExited
-        // TODO add your handling code here:
+        resetColorNuevo(search);
     }//GEN-LAST:event_searchMouseExited
 
     private void nuevoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nuevoMousePressed
@@ -455,12 +468,35 @@ public class Users extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_searchMousePressed
 
-    void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+    private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
+        setColorNuevo(nuevo);
+    }//GEN-LAST:event_jLabel3MouseEntered
+
+    private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
+        resetColorNuevo(nuevo);
+    }//GEN-LAST:event_jLabel3MouseExited
+
+     void setColorEliminar(JPanel panel){
+        panel.setBackground(new Color(191, 11, 0));
     }
-    void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+    void resetColorEliminar(JPanel panel){
+        panel.setBackground(new Color(153, 9, 0));
     }
+    
+    void setColorEditar(JPanel panel){
+        panel.setBackground(new Color(6, 153, 0));
+    }
+    void resetColorEditar(JPanel panel){
+        panel.setBackground(new Color(5, 115, 0));
+    }
+    
+     void setColorNuevo(JPanel panel){
+        panel.setBackground(new Color(21, 109, 211));
+    }
+    void resetColorNuevo(JPanel panel){
+        panel.setBackground(new Color(18, 90, 173));
+    }
+    
     
     private void GetUsers() throws SQLException{
         Statement stm = reg.createStatement();
@@ -498,6 +534,7 @@ public class Users extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTable1;

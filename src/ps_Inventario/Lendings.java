@@ -13,6 +13,7 @@ import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -57,9 +58,10 @@ public class Lendings extends javax.swing.JPanel {
         dni = new javax.swing.JTextField();
         button = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         Image = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(238, 238, 238));
         setMinimumSize(new java.awt.Dimension(750, 430));
         setPreferredSize(new java.awt.Dimension(750, 430));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -93,6 +95,7 @@ public class Lendings extends javax.swing.JPanel {
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 10, 350));
 
+        articulo_id.setBackground(new java.awt.Color(238, 238, 238));
         articulo_id.setForeground(new java.awt.Color(102, 102, 102));
         articulo_id.setText("Ingrese el ID del Elemento a retirar");
         articulo_id.setBorder(null);
@@ -108,6 +111,7 @@ public class Lendings extends javax.swing.JPanel {
         });
         add(articulo_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 260, 30));
 
+        dni.setBackground(new java.awt.Color(238, 238, 238));
         dni.setForeground(new java.awt.Color(102, 102, 102));
         dni.setText("Ingrese el Dni del usuario");
         dni.setBorder(null);
@@ -144,13 +148,23 @@ public class Lendings extends javax.swing.JPanel {
         jLabel1.setText("Prestar");
         button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
 
-        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, 260, 50));
+        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 260, 50));
+
+        jComboBox1.setBackground(new java.awt.Color(238, 238, 238));
+        jComboBox1.setEditable(true);
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 260, 30));
 
         Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/prestamo.gif"))); // NOI18N
         Image.setMaximumSize(new java.awt.Dimension(750, 430));
         Image.setMinimumSize(new java.awt.Dimension(750, 430));
-        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -140, -1, -1));
+        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -130, 630, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void articulo_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulo_idActionPerformed
@@ -239,6 +253,14 @@ public class Lendings extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_dniActionPerformed
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    
+    // Cargar datos en combo box "lista desplegable"
+    
+   
     void setColor(JPanel panel){
         panel.setBackground(new Color(21,101,192));
     }
@@ -415,9 +437,16 @@ public class Lendings extends javax.swing.JPanel {
     private javax.swing.JPanel body;
     private javax.swing.JPanel button;
     private javax.swing.JTextField dni;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     // End of variables declaration//GEN-END:variables
+
+    private static class elemento {
+
+        public elemento() {
+        }
+    }
 }

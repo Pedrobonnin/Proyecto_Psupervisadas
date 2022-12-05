@@ -48,14 +48,15 @@ public class Articulos extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        nuevo = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         body = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         bid = new javax.swing.JTextField();
         button = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        nuevo = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         edit = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         delete = new javax.swing.JPanel();
@@ -63,57 +64,13 @@ public class Articulos extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(750, 430));
-        setPreferredSize(new java.awt.Dimension(750, 430));
+        setBackground(new java.awt.Color(238, 238, 238));
+        setMinimumSize(new java.awt.Dimension(890, 430));
+        setPreferredSize(new java.awt.Dimension(890, 430));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        body.setBackground(new java.awt.Color(255, 255, 255));
-        body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Title.setText("Elemento");
-        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
-
-        jSeparator2.setForeground(new java.awt.Color(0, 153, 255));
-        jSeparator2.setPreferredSize(new java.awt.Dimension(250, 10));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 620, 10));
-
-        bid.setForeground(new java.awt.Color(102, 102, 102));
-        bid.setText("Ingrese el ID del Libro a buscar");
-        bid.setBorder(null);
-        bid.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                bidMousePressed(evt);
-            }
-        });
-        add(bid, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 620, 30));
-
-        button.setBackground(new java.awt.Color(18, 90, 173));
-        button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        button.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                buttonMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                buttonMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                buttonMousePressed(evt);
-            }
-        });
-        button.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Buscar");
-        button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, -1));
-
-        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 40, 80, 30));
-
         nuevo.setBackground(new java.awt.Color(18, 90, 173));
+        nuevo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         nuevo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         nuevo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -133,15 +90,77 @@ public class Articulos extends javax.swing.JPanel {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Nuevo");
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel3MouseEntered(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jLabel3MousePressed(evt);
             }
         });
-        nuevo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, -1));
+        nuevo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 60, 20));
 
-        add(nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 395, 80, -1));
+        add(nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 80, 30));
 
-        edit.setBackground(new java.awt.Color(18, 90, 173));
+        body.setBackground(new java.awt.Color(255, 255, 255));
+        body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Title.setText("Elemento");
+        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        jSeparator2.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator2.setPreferredSize(new java.awt.Dimension(250, 10));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 620, 10));
+
+        bid.setBackground(new java.awt.Color(238, 238, 238));
+        bid.setForeground(new java.awt.Color(102, 102, 102));
+        bid.setText("Ingrese el ID del Elemento a buscar");
+        bid.setBorder(null);
+        bid.setSelectionColor(new java.awt.Color(248, 130, 41));
+        bid.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                bidMousePressed(evt);
+            }
+        });
+        bid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bidActionPerformed(evt);
+            }
+        });
+        add(bid, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 620, 30));
+
+        button.setBackground(new java.awt.Color(18, 90, 173));
+        button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                buttonMousePressed(evt);
+            }
+        });
+        button.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setBackground(new java.awt.Color(240, 240, 240));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Buscar");
+        button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Sin título-1.png"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        button.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 5, 30, 20));
+
+        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 40, 90, 30));
+
+        edit.setBackground(new java.awt.Color(5, 115, 0));
+        edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         edit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -160,11 +179,12 @@ public class Articulos extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Editar");
-        edit.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, -1));
+        edit.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 60, 20));
 
-        add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 395, 80, -1));
+        add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 80, 30));
 
-        delete.setBackground(new java.awt.Color(18, 90, 173));
+        delete.setBackground(new java.awt.Color(153, 9, 0));
+        delete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         delete.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         delete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -183,10 +203,11 @@ public class Articulos extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Borrar");
-        delete.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 60, -1));
+        delete.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 60, 20));
 
-        add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 395, 80, -1));
+        add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 400, 80, 30));
 
+        jTable1.setBackground(new java.awt.Color(238, 238, 238));
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -209,7 +230,7 @@ public class Articulos extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Elemento", "Fecha de Pub.", "Categoría", "Descripción", "Stock", "Disponibles"
+                "ID", "Elemento", "Fecha", "Categoría", "Descripción", "Stock", "Disponibles"
             }
         ) {
             Class[] types = new Class [] {
@@ -227,7 +248,6 @@ public class Articulos extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.getTableHeader().setReorderingAllowed(false);
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jTable1MousePressed(evt);
@@ -239,22 +259,23 @@ public class Articulos extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bidMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bidMousePressed
-       if(bid.getText().equals("Ingrese el ID del Articulo a buscar"))
+       if(bid.getText().equals("Ingrese el ID del Elemento a buscar"))
         bid.setText("");
     }//GEN-LAST:event_bidMousePressed
 
     private void buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseEntered
-        setColor(button);
+        setColorNuevo(button);
     }//GEN-LAST:event_buttonMouseEntered
 
     private void buttonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseExited
-        resetColor(button);
+        resetColorNuevo(button);
     }//GEN-LAST:event_buttonMouseExited
 
     private void jLabel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MousePressed
         // Abrir sección
+        
         UpElementos p1 = new UpElementos();
-        p1.setSize(750, 430);
+        p1.setSize(890, 430);
         p1.setLocation(0,0);
 
         content.removeAll();
@@ -264,17 +285,17 @@ public class Articulos extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel3MousePressed
 
     private void nuevoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nuevoMouseEntered
-        // TODO add your handling code here:
+        setColorNuevo(nuevo);
     }//GEN-LAST:event_nuevoMouseEntered
 
     private void nuevoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nuevoMouseExited
-        // TODO add your handling code here:
+        resetColorNuevo(nuevo);
     }//GEN-LAST:event_nuevoMouseExited
 
     private void nuevoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nuevoMousePressed
         // Abrir sección
         UpUsers p1 = new UpUsers();
-        p1.setSize(750, 430);
+        p1.setSize(890, 430);
         p1.setLocation(0,0);
 
         content.removeAll();
@@ -284,31 +305,31 @@ public class Articulos extends javax.swing.JPanel {
     }//GEN-LAST:event_nuevoMousePressed
 
     private void editMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editMouseEntered
-        // TODO add your handling code here:
+        setColorEditar(edit);
     }//GEN-LAST:event_editMouseEntered
 
     private void editMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editMouseExited
-        // TODO add your handling code here:
+        resetColorEditar(edit);
     }//GEN-LAST:event_editMouseExited
 
     private void deleteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseEntered
-        setColor(delete);
+        setColorEliminar(delete);
     }//GEN-LAST:event_deleteMouseEntered
 
     private void deleteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseExited
-        resetColor(delete);
+        resetColorEliminar(delete);
     }//GEN-LAST:event_deleteMouseExited
 
     private void jTable1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MousePressed
         if(bid.getText().equals("") || bid.getText() == null || bid.getText().equals(" "))
-            bid.setText("Ingrese el ID del Articulo a buscar");
+            bid.setText("Ingrese el ID del Elemento a buscar");
     }//GEN-LAST:event_jTable1MousePressed
     // BORRAR
     private void deleteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMousePressed
         try {
             int idcell = jTable1.getSelectedRow();
             if(idcell <= -1){
-                javax.swing.JOptionPane.showMessageDialog(this, "Debe seleccionar el Articulo a borrar. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                javax.swing.JOptionPane.showMessageDialog(this, "Debe seleccionar el Elemento a borrar. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
             }
             else{
                 Statement stm = reg.createStatement();
@@ -397,7 +418,7 @@ public class Articulos extends javax.swing.JPanel {
                     String bavai = list[idcell][6];            
 
                     UpElementos p1 = new UpElementos(bid, belemento, bdate, bcategory, bdesc, bstock, bavai);
-                    p1.setSize(750, 430);
+                    p1.setSize(890, 430);
                     p1.setLocation(5, 5);
 
                     content.removeAll();
@@ -444,11 +465,37 @@ public class Articulos extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_buttonMousePressed
 
-    void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+    private void bidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bidActionPerformed
+
+    private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
+        setColorNuevo(nuevo);
+    }//GEN-LAST:event_jLabel3MouseEntered
+
+     private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {                                     
+        resetColorNuevo(nuevo);
+    }    
+     
+    void setColorEliminar(JPanel panel){
+        panel.setBackground(new Color(191, 11, 0));
     }
-    void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+    void resetColorEliminar(JPanel panel){
+        panel.setBackground(new Color(153, 9, 0));
+    }
+    
+    void setColorEditar(JPanel panel){
+        panel.setBackground(new Color(6, 153, 0));
+    }
+    void resetColorEditar(JPanel panel){
+        panel.setBackground(new Color(5, 115, 0));
+    }
+    
+     void setColorNuevo(JPanel panel){
+        panel.setBackground(new Color(21, 109, 211));
+    }
+    void resetColorNuevo(JPanel panel){
+        panel.setBackground(new Color(18, 90, 173));
     }
     
     private void GetArticulos() throws SQLException{
@@ -490,6 +537,7 @@ public class Articulos extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTable1;

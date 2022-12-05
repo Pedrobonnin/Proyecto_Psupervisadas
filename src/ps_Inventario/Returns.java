@@ -48,8 +48,8 @@ public class Returns extends javax.swing.JPanel {
         Image = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(750, 430));
-        setPreferredSize(new java.awt.Dimension(750, 430));
+        setMinimumSize(new java.awt.Dimension(850, 430));
+        setPreferredSize(new java.awt.Dimension(890, 430));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         body.setBackground(new java.awt.Color(255, 255, 255));
@@ -133,7 +133,7 @@ public class Returns extends javax.swing.JPanel {
         Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/iStock.jpg"))); // NOI18N
         Image.setMaximumSize(new java.awt.Dimension(750, 430));
         Image.setMinimumSize(new java.awt.Dimension(750, 430));
-        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, -1, -1));
+        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 40, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void articulo_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulo_idActionPerformed

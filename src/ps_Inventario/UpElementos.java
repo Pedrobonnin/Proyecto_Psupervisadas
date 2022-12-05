@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
@@ -34,12 +35,11 @@ public class UpElementos extends javax.swing.JPanel {
         edition = false;
     }
     
-    public UpElementos(String bid, String belemento, String bdate, String bcategory, String bdesc, String bejem, String bstock, String bavai){
+    public UpElementos(String bid, String belemento, String bdate, String bcategory, String bdesc, String bstock, String bavai){
         initComponents();
         conn = new Connect();
         reg = conn.getConnection();
         edition = true;
-        
         origId = bid;
         id.setText(bid);
         elemento.setText(belemento);
@@ -51,9 +51,7 @@ public class UpElementos extends javax.swing.JPanel {
         jLabel1.setText("Guardar");
     }
 
-    UpElementos(String bid, String belemento, String bdate, String bcategory, String bdesc, String bstock, String bavai) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
