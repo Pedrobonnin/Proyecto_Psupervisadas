@@ -46,17 +46,53 @@ public class Reports extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonSinEntregar = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         body = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        button = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        buttonActualizar = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(238, 238, 238));
         setMinimumSize(new java.awt.Dimension(750, 430));
         setPreferredSize(new java.awt.Dimension(750, 430));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        buttonSinEntregar.setBackground(new java.awt.Color(18, 90, 173));
+        buttonSinEntregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        buttonSinEntregar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonSinEntregarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonSinEntregarMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                buttonSinEntregarMousePressed(evt);
+            }
+        });
+        buttonSinEntregar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Sin Entregar");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel1MouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel1MousePressed(evt);
+            }
+        });
+        buttonSinEntregar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 30));
+
+        add(buttonSinEntregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, 140, 30));
 
         body.setBackground(new java.awt.Color(255, 255, 255));
         body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -109,7 +145,6 @@ public class Reports extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jTable1.setRowSelectionAllowed(false);
         jTable1.getTableHeader().setReorderingAllowed(false);
         jTable1.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
@@ -120,85 +155,131 @@ public class Reports extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 750, 330));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 850, 330));
 
-        button.setBackground(new java.awt.Color(18, 90, 173));
-        button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        button.addMouseListener(new java.awt.event.MouseAdapter() {
+        buttonActualizar.setBackground(new java.awt.Color(18, 90, 173));
+        buttonActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        buttonActualizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                buttonMouseEntered(evt);
+                buttonActualizarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                buttonMouseExited(evt);
+                buttonActualizarMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                buttonMousePressed(evt);
+                buttonActualizarMousePressed(evt);
             }
         });
-        button.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        buttonActualizar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Actualizar");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Todo");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel2MouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jLabel1MousePressed(evt);
+                jLabel2MousePressed(evt);
             }
         });
-        button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 100, 30));
+        buttonActualizar.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 30));
 
-        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, 140, 30));
+        add(buttonActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, 140, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTable1InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTable1InputMethodTextChanged
         //nothing
     }//GEN-LAST:event_jTable1InputMethodTextChanged
 
-    private void buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseEntered
-        setColor(button);
-    }//GEN-LAST:event_buttonMouseEntered
+    private void buttonSinEntregarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonSinEntregarMouseEntered
+        setColor(buttonSinEntregar);
+    }//GEN-LAST:event_buttonSinEntregarMouseEntered
 
-    private void buttonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseExited
-        resetColor(button);
-    }//GEN-LAST:event_buttonMouseExited
+    private void buttonSinEntregarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonSinEntregarMouseExited
+        resetColor(buttonSinEntregar);
+    }//GEN-LAST:event_buttonSinEntregarMouseExited
 
-    private void buttonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMousePressed
+    private void buttonSinEntregarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonSinEntregarMousePressed
         try {
-            GetReports();
+            GetSinEntregar();
         } catch (SQLException ex) {
             Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_buttonMousePressed
+    }//GEN-LAST:event_buttonSinEntregarMousePressed
 
     private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
         try {
-            GetReports();
+            GetSinEntregar();
         } catch (SQLException ex) {
             Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jLabel1MousePressed
 
+    private void jLabel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MousePressed
+        try {
+            GetReports();
+        } catch (SQLException ex) {
+            Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jLabel2MousePressed
+
+    private void buttonActualizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonActualizarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonActualizarMouseEntered
+
+    private void buttonActualizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonActualizarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonActualizarMouseExited
+
+    private void buttonActualizarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonActualizarMousePressed
+        try {
+            GetReports();
+        } catch (SQLException ex) {
+            Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_buttonActualizarMousePressed
+    //cOLORES DEL BOTTON "Sin Entregar"
+    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
+        setColor(buttonSinEntregar);
+    }//GEN-LAST:event_jLabel1MouseEntered
+
+    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+        resetColor(buttonSinEntregar);
+    }//GEN-LAST:event_jLabel1MouseExited
+    //cOLORES DEL BOTTON "TODO"
+    private void jLabel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseExited
+        resetColor(buttonActualizar);
+    }//GEN-LAST:event_jLabel2MouseExited
+
+    private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
+        setColor(buttonActualizar);
+    }//GEN-LAST:event_jLabel2MouseEntered
+
     void setColor(JPanel panel){
         panel.setBackground(new Color(210, 110, 35));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(213, 112, 27));
+        panel.setBackground(new Color(18,90,173));
     }
     
     private void GetReports() throws SQLException{
         Statement stm = reg.createStatement();
-        ResultSet counter = stm.executeQuery("SELECT * FROM `lendings`");
+        ResultSet counter = stm.executeQuery("SELECT user_id, elemento,date_out,date_return FROM lendings inner join articulos on id = articulo_id;");
         
         int count = 0;
         while(counter.next()){count++;}
         
         String list[][] = new String[count][4];
         int i = 0;
-        ResultSet re = stm.executeQuery("SELECT * FROM `lendings`");
+        ResultSet re = stm.executeQuery("SELECT user_id, elemento,date_out,date_return FROM lendings inner join articulos on id = articulo_id;");
         while(re.next()){
             list[i][0] = re.getString("user_id");
-            list[i][1] = re.getString("articulo_id");
+            list[i][1] = re.getString("elemento");
             list[i][2] = re.getString("date_out");
             list[i][3] = re.getString("date_return");
             i++;
@@ -209,13 +290,46 @@ public class Reports extends javax.swing.JPanel {
         new String [] {
             "User Dni", "Articulo ID", "Fecha de Salida", "Fecha de Entrega"
         }));
+        re.close();
+        stm.close();
+        counter.close();
     }
-
+    
+    private void GetSinEntregar() throws SQLException{
+        Statement stm = reg.createStatement();
+        ResultSet counter = stm.executeQuery("SELECT user_id, elemento,date_out,date_return FROM lendings inner join articulos on id = articulo_id WHERE date_return = \"Sin Entregar\";");
+        
+        int count = 0;
+        while(counter.next()){count++;}
+        
+        String list[][] = new String[count][4];
+        int i = 0;
+        ResultSet re = stm.executeQuery("SELECT user_id, elemento,date_out,date_return FROM lendings inner join articulos on id = articulo_id WHERE date_return = \"Sin Entregar\";");
+        while(re.next()){
+            list[i][0] = re.getString("user_id");
+            list[i][1] = re.getString("elemento");
+            list[i][2] = re.getString("date_out");
+            list[i][3] = re.getString("date_return");
+            i++;
+        }
+        
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        list,
+        new String [] {
+            "User Dni", "Articulo ID", "Fecha de Salida", "Fecha de Entrega"
+        }));
+        re.close();
+        stm.close();
+        counter.close();
+    }
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Title;
     private javax.swing.JPanel body;
-    private javax.swing.JPanel button;
+    private javax.swing.JPanel buttonActualizar;
+    private javax.swing.JPanel buttonSinEntregar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables

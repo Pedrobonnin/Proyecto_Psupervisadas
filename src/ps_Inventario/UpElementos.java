@@ -89,9 +89,9 @@ public class UpElementos extends javax.swing.JPanel {
         jSeparator16 = new javax.swing.JSeparator();
         Text15 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(750, 430));
-        setPreferredSize(new java.awt.Dimension(750, 430));
+        setBackground(new java.awt.Color(238, 238, 238));
+        setMinimumSize(new java.awt.Dimension(870, 430));
+        setPreferredSize(new java.awt.Dimension(870, 430));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         body.setBackground(new java.awt.Color(255, 255, 255));
@@ -100,12 +100,12 @@ public class UpElementos extends javax.swing.JPanel {
 
         Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Title.setText("Cargar nuevo Articulos");
-        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, -1));
+        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         jSeparator3.setForeground(new java.awt.Color(204, 204, 204));
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, 10, 350));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 10, 310));
 
         button.setBackground(new java.awt.Color(18, 90, 173));
         button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -128,12 +128,13 @@ public class UpElementos extends javax.swing.JPanel {
         jLabel1.setText("Subir");
         button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, 30));
 
-        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 260, 50));
+        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 360, 260, 50));
 
         Text3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text3.setText("Articulo ID");
-        add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
+        add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
+        id.setBackground(new java.awt.Color(238, 238, 238));
         id.setForeground(new java.awt.Color(102, 102, 102));
         id.setText("Ingrese el ID del Elemento");
         id.setBorder(null);
@@ -147,16 +148,18 @@ public class UpElementos extends javax.swing.JPanel {
                 idActionPerformed(evt);
             }
         });
-        add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 260, 30));
+        add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 260, 30));
 
-        jSeparator4.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator4.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator4.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator4.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 260, 10));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 260, 10));
 
         Text6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text6.setText("Título");
-        add(Text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        add(Text6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
 
+        elemento.setBackground(new java.awt.Color(238, 238, 238));
         elemento.setForeground(new java.awt.Color(102, 102, 102));
         elemento.setText("Ingrese el Título");
         elemento.setBorder(null);
@@ -170,16 +173,18 @@ public class UpElementos extends javax.swing.JPanel {
                 elementoActionPerformed(evt);
             }
         });
-        add(elemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 260, 30));
+        add(elemento, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 260, 30));
 
-        jSeparator7.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator7.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator7.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator7.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 260, 10));
+        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 260, 10));
 
         Text7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text7.setText("Fecha de Publicación");
-        add(Text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+        add(Text7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
+        date.setBackground(new java.awt.Color(238, 238, 238));
         date.setForeground(new java.awt.Color(102, 102, 102));
         date.setText("Ingrese la Fecha de Publicación");
         date.setBorder(null);
@@ -193,16 +198,18 @@ public class UpElementos extends javax.swing.JPanel {
                 dateActionPerformed(evt);
             }
         });
-        add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 260, 30));
+        add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 260, 30));
 
-        jSeparator8.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator8.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator8.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator8.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 260, 10));
+        add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 260, 10));
 
         Text9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text9.setText("Categoría");
-        add(Text9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
+        add(Text9, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 70, -1, -1));
 
+        category.setBackground(new java.awt.Color(238, 238, 238));
         category.setForeground(new java.awt.Color(102, 102, 102));
         category.setText("Ingrese la Categoría del Elemento");
         category.setBorder(null);
@@ -216,16 +223,18 @@ public class UpElementos extends javax.swing.JPanel {
                 categoryActionPerformed(evt);
             }
         });
-        add(category, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 260, 30));
+        add(category, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, 260, 30));
 
-        jSeparator10.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator10.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator10.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator10.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 260, 10));
+        add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 260, 10));
 
         Text12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text12.setText("Descripción");
-        add(Text12, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, -1, -1));
+        add(Text12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, -1, -1));
 
+        descr.setBackground(new java.awt.Color(238, 238, 238));
         descr.setForeground(new java.awt.Color(102, 102, 102));
         descr.setText("Ingrese la descripción del Elemento");
         descr.setBorder(null);
@@ -239,16 +248,18 @@ public class UpElementos extends javax.swing.JPanel {
                 descrActionPerformed(evt);
             }
         });
-        add(descr, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 260, 30));
+        add(descr, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 260, 30));
 
-        jSeparator13.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator13.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator13.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator13.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 260, 10));
+        add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, 260, 10));
 
         Text13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text13.setText("Stock");
-        add(Text13, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, -1, -1));
+        add(Text13, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, -1, -1));
 
+        stock.setBackground(new java.awt.Color(238, 238, 238));
         stock.setForeground(new java.awt.Color(102, 102, 102));
         stock.setText("Cantidad Total");
         stock.setBorder(null);
@@ -262,12 +273,14 @@ public class UpElementos extends javax.swing.JPanel {
                 stockActionPerformed(evt);
             }
         });
-        add(stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 80, 30));
+        add(stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 80, 30));
 
-        jSeparator14.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator14.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator14.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator14.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 80, 10));
+        add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 80, 10));
 
+        available.setBackground(new java.awt.Color(238, 238, 238));
         available.setForeground(new java.awt.Color(102, 102, 102));
         available.setText("Cantidad a prestar");
         available.setBorder(null);
@@ -281,15 +294,16 @@ public class UpElementos extends javax.swing.JPanel {
                 availableActionPerformed(evt);
             }
         });
-        add(available, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 140, 100, 30));
+        add(available, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 100, 30));
 
-        jSeparator16.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator16.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator16.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator16.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, 100, 10));
+        add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 290, 100, 10));
 
         Text15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text15.setText("Disponibles");
-        add(Text15, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 120, -1, -1));
+        add(Text15, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 230, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseEntered
@@ -447,7 +461,7 @@ public class UpElementos extends javax.swing.JPanel {
 
     // SUBIR
     private void buttonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMousePressed
-        if(id.getText().equals("Ingrese el ID del Elemento") || elemento.getText().equals("Ingrese el Título")
+        if(elemento.getText().equals("Ingrese el Título")
             || date.getText().equals("Ingrese la Fecha de Publicación") 
             || category.getText().equals("Ingrese la Categoría del Elemento")
             || descr.getText().equals("Ingrese la descripción del Elemento")|| stock.getText().equals("Cantidad Total")
@@ -488,7 +502,7 @@ public class UpElementos extends javax.swing.JPanel {
                         if(edition)
                             EditArticulo(bid, belemento, bdate,  bcategory, bdescr, stc, av);
                         else
-                            InsertArticulo(bid, belemento, bdate,  bcategory, bdescr, stc, av);
+                            InsertArticulo(belemento, bdate,  bcategory, bdescr, stc, av);
 
                         id.setText("");
                         elemento.setText("");
@@ -503,8 +517,8 @@ public class UpElementos extends javax.swing.JPanel {
 
                         if(edition){
                             Articulos p1 = new Articulos();
-                            p1.setSize(750, 430);
-                            p1.setLocation(5, 5);
+                            p1.setSize(850, 430);
+                            p1.setLocation(0, 0);
 
                             content.removeAll();
                             content.add(p1, BorderLayout.CENTER);
@@ -530,10 +544,10 @@ public class UpElementos extends javax.swing.JPanel {
         panel.setBackground(new Color(18,90,173));
     }
     
-    public void InsertArticulo(String id, String elem, String fech, String cate, String desc, int stck, int avai) throws SQLException{
+    public void InsertArticulo(String elem, String fech, String cate, String desc, int stck, int avai) throws SQLException{
         Statement stm = reg.createStatement();
         
-        stm.executeUpdate("INSERT INTO `articulos` (`id`, `elemento`, `date`, `category`, `description`, `stock`, `available`) VALUES ('"+id+"', '"+elem+"', '"+ fech +"', '"+cate+"', '"+desc+"', '"+stck+"', '"+avai+"')");
+        stm.executeUpdate("INSERT INTO `articulos` (`id`, `elemento`, `date`, `category`, `description`, `stock`, `available`) VALUES ((SELECT max(id)+1 FROM articulos), '"+elem+"', '"+ fech +"', '"+cate+"', '"+desc+"', '"+stck+"', '"+avai+"')");
         javax.swing.JOptionPane.showMessageDialog(this, "¡Elemento registrado correctamente! \n", "HECHO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
         
     }

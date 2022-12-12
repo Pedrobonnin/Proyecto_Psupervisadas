@@ -16,6 +16,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JPanel;
 import static ps_Inventario.Dashboard.content;
 import java.awt.BorderLayout;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -50,6 +51,7 @@ public class Articulos extends javax.swing.JPanel {
 
         nuevo = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         body = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -59,13 +61,15 @@ public class Articulos extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         edit = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         delete = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(238, 238, 238));
-        setMinimumSize(new java.awt.Dimension(890, 430));
+        setMinimumSize(new java.awt.Dimension(870, 430));
         setPreferredSize(new java.awt.Dimension(890, 430));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -97,9 +101,12 @@ public class Articulos extends javax.swing.JPanel {
                 jLabel3MousePressed(evt);
             }
         });
-        nuevo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 60, 20));
+        nuevo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
 
-        add(nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 80, 30));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/add-to-database-5.png"))); // NOI18N
+        nuevo.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 5, -1, -1));
+
+        add(nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 90, 30));
 
         body.setBackground(new java.awt.Color(255, 255, 255));
         body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -109,9 +116,9 @@ public class Articulos extends javax.swing.JPanel {
         Title.setText("Elemento");
         add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
-        jSeparator2.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator2.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator2.setPreferredSize(new java.awt.Dimension(250, 10));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 620, 10));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 580, 20));
 
         bid.setBackground(new java.awt.Color(238, 238, 238));
         bid.setForeground(new java.awt.Color(102, 102, 102));
@@ -128,7 +135,7 @@ public class Articulos extends javax.swing.JPanel {
                 bidActionPerformed(evt);
             }
         });
-        add(bid, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 620, 30));
+        add(bid, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 580, 30));
 
         button.setBackground(new java.awt.Color(18, 90, 173));
         button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -153,11 +160,12 @@ public class Articulos extends javax.swing.JPanel {
         jLabel1.setText("Buscar");
         button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Sin título-1.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/search-database-5.png"))); // NOI18N
         jLabel5.setText("jLabel5");
-        button.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 5, 30, 20));
+        button.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 5, 30, -1));
 
-        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 40, 90, 30));
+        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 100, 30));
+        button.getAccessibleContext().setAccessibleDescription("");
 
         edit.setBackground(new java.awt.Color(5, 115, 0));
         edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -179,9 +187,12 @@ public class Articulos extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Editar");
-        edit.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 60, 20));
+        edit.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
 
-        add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 80, 30));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/edit-base.png"))); // NOI18N
+        edit.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 5, -1, -1));
+
+        add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 90, 30));
 
         delete.setBackground(new java.awt.Color(153, 9, 0));
         delete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -203,9 +214,12 @@ public class Articulos extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Borrar");
-        delete.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 5, 60, 20));
+        delete.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
 
-        add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 400, 80, 30));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/remove-from-database-5.png"))); // NOI18N
+        delete.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 5, -1, -1));
+
+        add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, 90, 30));
 
         jTable1.setBackground(new java.awt.Color(238, 238, 238));
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
@@ -255,7 +269,7 @@ public class Articulos extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 750, 300));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 850, 300));
     }// </editor-fold>//GEN-END:initComponents
 
     private void bidMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bidMousePressed
@@ -352,23 +366,37 @@ public class Articulos extends javax.swing.JPanel {
                     i++;
                 }
                 String id = list[idcell][0];
+                String elem = list[idcell][1];
                 if(id == null || id.equals("")){
-                    javax.swing.JOptionPane.showMessageDialog(this, "Debe seleccionar el libro a borrar. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                    javax.swing.JOptionPane.showMessageDialog(this, "Debe seleccionar el Elemento a borrar. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
                 }
                 else{
-                    Statement stm2=null;
-                    try {
-                    stm2 = reg.createStatement();
-                    } catch (SQLException ex) {
-                    Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, ex);
+                   
+                    
+                    int I = JOptionPane.showConfirmDialog(this, "Desea Eliminar el Elemento:  \""+elem+"\"");
+                    
+                    switch (I) {
+                        case 0:
+                            Statement stm2=null;
+                            try {
+                                stm2 = reg.createStatement();
+                            } catch (SQLException ex) {
+                                Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, ex);
+                            }       try {
+                                stm2.executeUpdate("DELETE FROM `articulos` WHERE `id` = '"+id+"'");
+                                javax.swing.JOptionPane.showMessageDialog(this, "¡Elemento borrado! \n", "HECHO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                                GetArticulos();
+                            } catch (SQLException ex) {
+                                Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, ex);
+                            }       break;
+                        case 1:
+                            javax.swing.JOptionPane.showMessageDialog(this, "Elemento Restaurado. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                            break;
+                        default:
+                            break;
                     }
-                    try {
-                    stm2.executeUpdate("DELETE FROM `articulos` WHERE `id` = '"+id+"'");
-                    javax.swing.JOptionPane.showMessageDialog(this, "¡Elemento borrado! \n", "HECHO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-                    GetArticulos();
-                    } catch (SQLException ex) {
-                    Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                    
+                    
                 }
             }
         } catch (SQLException ex) {
@@ -418,8 +446,8 @@ public class Articulos extends javax.swing.JPanel {
                     String bavai = list[idcell][6];            
 
                     UpElementos p1 = new UpElementos(bid, belemento, bdate, bcategory, bdesc, bstock, bavai);
-                    p1.setSize(890, 430);
-                    p1.setLocation(5, 5);
+                    p1.setSize(850, 430);
+                    p1.setLocation(0, 0);
 
                     content.removeAll();
                     content.add(p1, BorderLayout.CENTER);
@@ -538,6 +566,9 @@ public class Articulos extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTable1;

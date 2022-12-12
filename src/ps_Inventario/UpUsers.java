@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 import javax.swing.JPanel;
 import static ps_Inventario.Dashboard.content;
 import java.sql.Statement;
+import javax.swing.JLabel;
 /**
  *
  * @author Antonio
@@ -45,7 +46,7 @@ public class UpUsers extends javax.swing.JPanel {
         dom.setText(usdom);
         tel.setText(ustel);
         edit = true;
-        jLabel1.setText("Guardar");
+        Registro.setText("Guardar");
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -66,7 +67,7 @@ public class UpUsers extends javax.swing.JPanel {
         tel = new javax.swing.JTextField();
         dom = new javax.swing.JTextField();
         button = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        Registro = new javax.swing.JLabel();
         Text3 = new javax.swing.JLabel();
         name = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
@@ -77,7 +78,7 @@ public class UpUsers extends javax.swing.JPanel {
         dni = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(238, 238, 238));
         setMinimumSize(new java.awt.Dimension(750, 430));
         setPreferredSize(new java.awt.Dimension(750, 430));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -88,29 +89,32 @@ public class UpUsers extends javax.swing.JPanel {
 
         Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Title.setText("Registrar nuevo Usuario");
-        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
 
         Text1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text1.setText("Teléfono");
-        add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, -1, -1));
+        add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 160, -1, -1));
 
         Text2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text2.setText("Domicilio");
-        add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, -1, -1));
+        add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, -1, -1));
 
-        jSeparator1.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator1.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator1.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 260, 10));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 220, 260, 10));
 
-        jSeparator2.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator2.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator2.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator2.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 260, 10));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 260, 10));
 
         jSeparator3.setForeground(new java.awt.Color(204, 204, 204));
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, 10, 350));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, 10, 350));
 
+        tel.setBackground(new java.awt.Color(238, 238, 238));
         tel.setForeground(new java.awt.Color(102, 102, 102));
         tel.setText("Ingrese un número telefónico");
         tel.setBorder(null);
@@ -124,8 +128,9 @@ public class UpUsers extends javax.swing.JPanel {
                 telActionPerformed(evt);
             }
         });
-        add(tel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 260, 30));
+        add(tel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 260, 30));
 
+        dom.setBackground(new java.awt.Color(238, 238, 238));
         dom.setForeground(new java.awt.Color(102, 102, 102));
         dom.setText("Ingrese el domicilio");
         dom.setBorder(null);
@@ -139,7 +144,7 @@ public class UpUsers extends javax.swing.JPanel {
                 domActionPerformed(evt);
             }
         });
-        add(dom, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, 260, 30));
+        add(dom, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 260, 30));
 
         button.setBackground(new java.awt.Color(18, 90, 173));
         button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -156,18 +161,19 @@ public class UpUsers extends javax.swing.JPanel {
         });
         button.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Registrar");
-        button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
+        Registro.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Registro.setForeground(new java.awt.Color(255, 255, 255));
+        Registro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Registro.setText("Registrar");
+        button.add(Registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
 
-        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 260, 50));
+        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 280, 260, 50));
 
         Text3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text3.setText("Nombre");
-        add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
+        add(Text3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, -1, -1));
 
+        name.setBackground(new java.awt.Color(238, 238, 238));
         name.setForeground(new java.awt.Color(102, 102, 102));
         name.setText("Ingrese el nombre");
         name.setBorder(null);
@@ -181,16 +187,18 @@ public class UpUsers extends javax.swing.JPanel {
                 nameActionPerformed(evt);
             }
         });
-        add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 260, 30));
+        add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 260, 30));
 
-        jSeparator4.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator4.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator4.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator4.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 260, 10));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 260, 10));
 
         Text4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text4.setText("Apellido ");
-        add(Text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+        add(Text4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, -1, -1));
 
+        ap1.setBackground(new java.awt.Color(238, 238, 238));
         ap1.setForeground(new java.awt.Color(102, 102, 102));
         ap1.setText("Ingrese el apellido");
         ap1.setBorder(null);
@@ -204,16 +212,18 @@ public class UpUsers extends javax.swing.JPanel {
                 ap1ActionPerformed(evt);
             }
         });
-        add(ap1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 260, 30));
+        add(ap1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 260, 30));
 
-        jSeparator5.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator5.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator5.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator5.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 260, 10));
+        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 260, 10));
 
         Text5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text5.setText("DNI");
-        add(Text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
+        add(Text5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, -1, -1));
 
+        dni.setBackground(new java.awt.Color(238, 238, 238));
         dni.setForeground(new java.awt.Color(102, 102, 102));
         dni.setText("Ingrese el dni");
         dni.setBorder(null);
@@ -227,11 +237,12 @@ public class UpUsers extends javax.swing.JPanel {
                 dniActionPerformed(evt);
             }
         });
-        add(dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 260, 30));
+        add(dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 260, 30));
 
-        jSeparator6.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator6.setBackground(new java.awt.Color(240, 240, 240));
+        jSeparator6.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator6.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 260, 10));
+        add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 260, 10));
     }// </editor-fold>//GEN-END:initComponents
 
     private void telActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telActionPerformed
@@ -329,6 +340,8 @@ public class UpUsers extends javax.swing.JPanel {
     }//GEN-LAST:event_domActionPerformed
     // REGISTRAR
     private void buttonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMousePressed
+        //registro(Registro);
+        
         if(name.getText().equals("Ingrese el nombre") || ap1.getText().equals("Ingrese el apellido")
             || dni.getText().equals("Ingrese el dni") || dom.getText().equals("Ingrese el domicilio")
             || tel.getText().equals("Ingrese un número telefónico")){
@@ -362,7 +375,7 @@ public class UpUsers extends javax.swing.JPanel {
 
                     if(edit){
                         Users p1 = new Users();
-                        p1.setSize(750, 430);
+                        p1.setSize(850, 430);
                         p1.setLocation(0, 0);
 
                         content.removeAll();
@@ -384,10 +397,12 @@ public class UpUsers extends javax.swing.JPanel {
         panel.setBackground(new Color(18,90,173));
     }
     
+    
+    
     public void InsertUser(String name, String app, String dn, String dom, String tel) throws SQLException{
         Statement stm = reg.createStatement();
         
-        stm.executeUpdate("INSERT INTO `users` (`name`, `last_name_p`, `dni`, `domicilio`, `tel`) VALUES ('"+name+"', '"+app+"', '"+ dn +"', '"+ dom +"', '"+tel+"')");
+        stm.executeUpdate("INSERT INTO `users` (`id`,`name`, `last_name_p`, `dni`, `domicilio`, `tel`) VALUES ((SELECT max(id)+1 FROM users),'"+name+"', '"+app+"', '"+ dn +"', '"+ dom +"', '"+tel+"')");
         javax.swing.JOptionPane.showMessageDialog(this, "¡Usuario registrado correctamente! \n", "HECHO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
         
     }
@@ -401,6 +416,7 @@ public class UpUsers extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Registro;
     private javax.swing.JLabel Text1;
     private javax.swing.JLabel Text2;
     private javax.swing.JLabel Text3;
@@ -412,7 +428,6 @@ public class UpUsers extends javax.swing.JPanel {
     private javax.swing.JPanel button;
     private javax.swing.JTextField dni;
     private javax.swing.JTextField dom;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;

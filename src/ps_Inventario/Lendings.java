@@ -5,6 +5,7 @@
  */
 package ps_Inventario;
 
+
 import java.awt.Color;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -17,25 +18,32 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import ps_controller.Elementos;
+
 
 /**
  *
  * @author Antonio
  */
-public class Lendings extends javax.swing.JPanel {
+public final class Lendings extends javax.swing.JPanel {
 
     Connect conn;
     Connection reg;
-    /**
-     * Creates new form Principal
-     */
+    
+    ArrayList mListaElementos;
+    
     public Lendings() {
         initComponents();
         conn = new Connect();
         reg = conn.getConnection();
+        mListaElementos = new ArrayList();
+        cargarCombo();
+        
     }
 
     /**
@@ -51,15 +59,13 @@ public class Lendings extends javax.swing.JPanel {
         Title = new javax.swing.JLabel();
         Text1 = new javax.swing.JLabel();
         Text2 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
-        articulo_id = new javax.swing.JTextField();
         dni = new javax.swing.JTextField();
         button = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         Image = new javax.swing.JLabel();
+        comboBoxElementos = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(238, 238, 238));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -75,18 +81,14 @@ public class Lendings extends javax.swing.JPanel {
         add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         Text1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Text1.setText("Articulo ID");
+        Text1.setText("Eliga un Elemento a Retirar");
         add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, -1, -1));
 
         Text2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text2.setText("Dni Usuario");
         add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 50, -1, -1));
 
-        jSeparator1.setForeground(new java.awt.Color(0, 153, 255));
-        jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 260, 10));
-
-        jSeparator2.setForeground(new java.awt.Color(0, 153, 255));
+        jSeparator2.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator2.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 110, 260, 10));
 
@@ -94,22 +96,6 @@ public class Lendings extends javax.swing.JPanel {
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 10, 350));
-
-        articulo_id.setBackground(new java.awt.Color(238, 238, 238));
-        articulo_id.setForeground(new java.awt.Color(102, 102, 102));
-        articulo_id.setText("Ingrese el ID del Elemento a retirar");
-        articulo_id.setBorder(null);
-        articulo_id.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                articulo_idMousePressed(evt);
-            }
-        });
-        articulo_id.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                articulo_idActionPerformed(evt);
-            }
-        });
-        add(articulo_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 260, 30));
 
         dni.setBackground(new java.awt.Color(238, 238, 238));
         dni.setForeground(new java.awt.Color(102, 102, 102));
@@ -150,40 +136,20 @@ public class Lendings extends javax.swing.JPanel {
 
         add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 260, 50));
 
-        jComboBox1.setBackground(new java.awt.Color(238, 238, 238));
-        jComboBox1.setEditable(true);
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 260, 30));
-
         Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/prestamo.gif"))); // NOI18N
         Image.setMaximumSize(new java.awt.Dimension(750, 430));
         Image.setMinimumSize(new java.awt.Dimension(750, 430));
-        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -130, 630, -1));
-    }// </editor-fold>//GEN-END:initComponents
+        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -150, 630, -1));
 
-    private void articulo_idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulo_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_articulo_idActionPerformed
+        add(comboBoxElementos, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 260, 30));
+    }// </editor-fold>//GEN-END:initComponents
 
     private void dniMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dniMousePressed
        if(dni.getText().equals("Ingrese el Dni del usuario"))
         dni.setText("");
-       if(articulo_id.getText().equals("") || articulo_id.getText() == null || articulo_id.getText().equals(" "))
-        articulo_id.setText("Ingrese el ID del Elemento a prestar");
+       
     }//GEN-LAST:event_dniMousePressed
-
-    private void articulo_idMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_articulo_idMousePressed
-        if(articulo_id.getText().equals("Ingrese el ID del Elemento a retirar"))
-            articulo_id.setText("");
-        if(dni.getText().equals("") || dni.getText() == null || dni.getText().equals(" "))
-            dni.setText("Ingrese el Dni del usuario");
-    }//GEN-LAST:event_articulo_idMousePressed
 
     private void buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseEntered
         setColor(button);
@@ -195,11 +161,17 @@ public class Lendings extends javax.swing.JPanel {
     // PRESTAR
     private void buttonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMousePressed
         String dn = dni.getText();
-        String artic = articulo_id.getText();
+        
         int intdn = 0;
         
+        Elementos mElemento = (Elementos) comboBoxElementos.getSelectedItem();
+        int id_elem = mElemento.getId();
+        String elem = mElemento.getElemento();
+        
+      
         // Conditions
-        if(dn.equals("") || artic.equals("")){
+        if(dn.equals("") //|| artic.equals("")
+        ){
             javax.swing.JOptionPane.showMessageDialog(this, "Debe llenar todos los campos \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
             dni.requestFocus();
         }
@@ -226,22 +198,24 @@ public class Lendings extends javax.swing.JPanel {
                  dni.requestFocus();
             }
             // Verificamos el libro
-            else if(!Articulo(artic)){
-                javax.swing.JOptionPane.showMessageDialog(this, "No existe ningún libro con esa ID. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-                 articulo_id.requestFocus();
+            //else if(!Articulo(artic)){
+            //    javax.swing.JOptionPane.showMessageDialog(this, "No existe ningún libro con esa ID. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            //     articulo_id.requestFocus();
+            //}
+            else if(CheckLending(intdn, id_elem)){
+                javax.swing.JOptionPane.showMessageDialog(this, "Esa persona ya cuenta con el préstamo de ese mismo elementos. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                
             }
-            else if(CheckLending(intdn, artic)){
-                javax.swing.JOptionPane.showMessageDialog(this, "Esa persona ya cuenta con el préstamo de ese mismo Libro. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-                 articulo_id.requestFocus();
-            }
-            else if(!BookAvailable(artic)){
-                javax.swing.JOptionPane.showMessageDialog(this, "Ya no hay más libros con esa ID para prestar. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-                 articulo_id.requestFocus();
+            else if(!ElementoAvailable(id_elem)){
+                javax.swing.JOptionPane.showMessageDialog(this, "Ya no hay más elementos de ese tipo para prestar. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+                 
             }
             else{
-                InsertLending(intdn, artic);// Insertamos el prestamo a la DB.
+                
+        
+                InsertLending(intdn, id_elem);// Insertamos el prestamo a la DB.
                 dni.setText("");
-                articulo_id.setText("");
+                         
             }
               
         } catch (SQLException ex) {
@@ -253,10 +227,20 @@ public class Lendings extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_dniActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    public void cargarCombo() {
+       
+            comboBoxElementos.removeAllItems();
+            mListaElementos = conn.getListaElementos();
+            Iterator iterador = mListaElementos.iterator();  
+            while (iterador.hasNext()) {
+                Elementos elemento = (Elementos) iterador.next();
+                comboBoxElementos.addItem(elemento);
+            }
+           
+    }
+    
 
+  
     
     // Cargar datos en combo box "lista desplegable"
     
@@ -268,35 +252,48 @@ public class Lendings extends javax.swing.JPanel {
         panel.setBackground(new Color(18,90,173));
     }
     
+    
     public boolean UserExist(int dni) throws SQLException{
         boolean res = false;
         Statement stm = reg.createStatement();
         ResultSet re = stm.executeQuery("SELECT `id` FROM `users` WHERE `dni` = '"+dni+"'");
+        
         if(re.next())
             res = true;
+     
+        stm.close();
+        re.close();
         
-        return res;
+        return res;    
     }
     
     public boolean Articulo(String articuloid) throws SQLException{
         boolean res = false;
         Statement stm = reg.createStatement();
         ResultSet re = stm.executeQuery("SELECT `id` FROM `articulos` WHERE `id` = '"+articuloid+"'");
+        
         if(re.next())
             res = true;
+        
+        stm.close();
+        re.close();
         
         return res;
     }
     
-    public boolean BookAvailable(String articuloid) throws SQLException{
+    public boolean ElementoAvailable(int articuloid) throws SQLException{
         boolean res = false;
         Statement stm = reg.createStatement();
         ResultSet re = stm.executeQuery("SELECT `available` FROM `articulos` WHERE `id` = '"+articuloid+"'");
+        
         if(re.next()){
             int av = Integer.parseInt(re.getString("available"));
             if(av >= 1)
                 res = true;
         }
+        
+        stm.close();
+        re.close();
         
         return res;
     }
@@ -321,65 +318,60 @@ public class Lendings extends javax.swing.JPanel {
             System.out.println("4");
         }
         System.out.println("5");
-        return res;
+        
+        stm.close();
+        re.close();
+        
+        return res; 
     }
     
-    public boolean CheckLending(int userid, String articuloid) throws SQLException{
+    public boolean CheckLending(int userid, int articuloid) throws SQLException{
         boolean res = false;
         Statement stm = reg.createStatement();
-        ResultSet re = stm.executeQuery("SELECT * FROM `lendings` WHERE `user_id` = '"+userid+"' AND `articulo_id` = '"+ articuloid +"'");
+        ResultSet re = stm.executeQuery("SELECT * FROM `lendings` WHERE `user_id` = '"+userid+"' AND `articulo_id` = '"+articuloid+"' AND `date_return` = \"Sin Entregar\"");
+        
         if(re.next()){
             res = true;
         }
         
-        return res;
+        stm.close();
+        re.close();
+        
+        return res;      
     }
     
-    public void InsertLending(int id, String articuloid) throws SQLException{
+
+    public void InsertLending(int id, int id_elem) throws SQLException{ 
         Statement stm = reg.createStatement();
         String date = getFechaActual();
         Date ahora = new Date();
         Date devol = sumarFechasDias(ahora, 5);//Sumamos 5 días a la fecha actual.
-        SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy");
+        String x = "Sin Entregar";
+        SimpleDateFormat formateador = new SimpleDateFormat("yyyy-MM-dd");
         String dev = formateador.format(devol);
-        stm.executeUpdate("INSERT INTO `lendings` (`id`, `user_id`, `articulo_id`, `date_out`, `date_return`) VALUES (NULL, '"+id+"', '"+ articuloid +"', '"+ date +"', '"+dev+"')");
-        stm.executeUpdate("UPDATE `articulos` SET `available` = available-1 WHERE `id` = '"+ articuloid +"';");
+        stm.executeUpdate("INSERT INTO `lendings` (`len_id`, `user_id`, `articulo_id`, `date_out`, `date_return`) VALUES (NULL, '"+id+"', '"+ id_elem +"', '"+ date +"', '"+x+"')");
+        stm.executeUpdate("UPDATE `articulos` SET `available` = available-1 WHERE `id` = '"+ id_elem +"';");
         javax.swing.JOptionPane.showMessageDialog(this, "¡Prestamo realizado correctamente! \n", "HECHO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-        
+        stm.close();
     }
     
-    public void Devolutions(int dn, String articuloid) throws SQLException, ParseException{
+    public void Devolutions(int dn, int id_elem) throws SQLException, ParseException{
         Statement stm = reg.createStatement();
-        int days = -1;
-        boolean ready = false;
-        do{
-            ResultSet re = stm.executeQuery("SELECT * FROM `lendings` WHERE `articulo_id` = '"+articuloid+"' AND `user_id` = '"+dn+"'");
-            if(re.next()){
-                Date ahora = new Date();
-                Date returned = deStringToDate(re.getString("date_return"));
-                days = diferenciasDeFechas(ahora, returned);                
-            }
-            ready = true;
-        }while(!ready);
-        if(ready){
-            stm.executeUpdate("DELETE FROM `lendings` WHERE `articulo_id` = '"+ articuloid +"' AND `user_id` = '"+ dn +"'");
-            stm.executeUpdate("UPDATE `articulos` SET `available` = available+1 WHERE `id` = '"+ articuloid +"';");
-            if(days <= 0){
-                int money = 0;
-                money = days * -1;
-                int cost = 5;// Costo por día retardado.
-                money = money * cost;
-                stm.executeUpdate("UPDATE `users` SET `sanctions` = sanctions+1, `sanc_money` = sanc_money+'"+ money +"' WHERE `id` = '"+ dn +"';");
-                javax.swing.JOptionPane.showMessageDialog(this, "¡SANCIONADO POR ENTREGA A DESTIEMPO! ($"+money+") \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-            }
-            javax.swing.JOptionPane.showMessageDialog(this, "¡Devolución realizada correctamente! \n", "HECHO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        Elementos mElemento = (Elementos) comboBoxElementos.getSelectedItem();
+        String fecha_out = mElemento.getFechaOut();
+        String date = getFechaActual();
+        stm.executeUpdate("UPDATE `lendings` SET `date_return` = '"+ date +"'  WHERE `articulo_id` = '"+ id_elem +"' AND `user_id` = '"+ dn +"' AND date_out=(SELECT max(date_out) from lendings  WHERE `articulo_id` = '"+ id_elem +"' AND `user_id` = '"+ dn +"');");
+        stm.executeUpdate("UPDATE `articulos` SET `available` = available+1 WHERE `id` = '"+ id_elem +"';");
+        javax.swing.JOptionPane.showMessageDialog(this, "¡Devolución realizada correctamente! \n", "HECHO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
 
-        }
+        
+        stm.close();
+
     }
     
     public static String getFechaActual() {
         Date ahora = new Date();
-        SimpleDateFormat formateador = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat formateador = new SimpleDateFormat("yyyy-MM-dd");
         return formateador.format(ahora);
     }
     
@@ -417,7 +409,7 @@ public class Lendings extends javax.swing.JPanel {
     //@param La fecha a convertir a formato date
     //@return Retorna la fecha en formato Date
     public static synchronized java.util.Date deStringToDate(String fecha) {
-        SimpleDateFormat formatoDelTexto = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
         Date fechaEnviar = null;
         try {
             fechaEnviar = formatoDelTexto.parse(fecha);
@@ -433,20 +425,12 @@ public class Lendings extends javax.swing.JPanel {
     private javax.swing.JLabel Text1;
     private javax.swing.JLabel Text2;
     private javax.swing.JLabel Title;
-    private javax.swing.JTextField articulo_id;
     private javax.swing.JPanel body;
     private javax.swing.JPanel button;
+    private javax.swing.JComboBox<Elementos> comboBoxElementos;
     private javax.swing.JTextField dni;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     // End of variables declaration//GEN-END:variables
-
-    private static class elemento {
-
-        public elemento() {
-        }
-    }
 }

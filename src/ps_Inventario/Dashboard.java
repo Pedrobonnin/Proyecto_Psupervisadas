@@ -28,11 +28,11 @@ public class Dashboard extends javax.swing.JFrame {
         int dia = now.getDayOfMonth();
         int month = now.getMonthValue();
         String[] meses = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto"," ;Septiembre"
-            ,"Octubre","Noviembre","Diciemrbre"};
+            ,"Octubre","Noviembre","Diciembre"};
         fecha.setText("Hoy es "+dia+" de "+meses[month - 1]+" de "+year);
         
         Principal p1 = new Principal();
-        p1.setSize(750, 430);
+        p1.setSize(850, 430);
         p1.setLocation(0,0);
         
         content.removeAll();
@@ -158,7 +158,7 @@ public class Dashboard extends javax.swing.JFrame {
         btn_prin.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/home-outline.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Process-Info-5.png"))); // NOI18N
         btn_prin.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -186,7 +186,7 @@ public class Dashboard extends javax.swing.JFrame {
         btn_returns.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/calendar-multiple-check.png"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/flecha izquierda2.png"))); // NOI18N
         btn_returns.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -213,7 +213,7 @@ public class Dashboard extends javax.swing.JFrame {
         btn_users.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/account-multiple.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Add-Male-User-6.png"))); // NOI18N
         btn_users.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -240,7 +240,7 @@ public class Dashboard extends javax.swing.JFrame {
         btn_books.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/book-open-page-variant.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/base.png"))); // NOI18N
         btn_books.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -267,7 +267,7 @@ public class Dashboard extends javax.swing.JFrame {
         btn_reports.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/file-chart.png"))); // NOI18N
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/output-onlinepngtools (1).png"))); // NOI18N
         btn_reports.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -294,7 +294,7 @@ public class Dashboard extends javax.swing.JFrame {
         btn_lends.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/calendar-plus.png"))); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/flecha derecha3.png"))); // NOI18N
         btn_lends.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -437,14 +437,14 @@ public class Dashboard extends javax.swing.JFrame {
         content.setLayout(contentLayout);
         contentLayout.setHorizontalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 750, Short.MAX_VALUE)
+            .addGap(0, 860, Short.MAX_VALUE)
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 440, Short.MAX_VALUE)
         );
 
-        Background.add(content, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 750, 440));
+        Background.add(content, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, 860, 440));
 
         Header.setBackground(new java.awt.Color(210, 110, 35));
         Header.setMaximumSize(new java.awt.Dimension(10032767, 10032767));
@@ -505,7 +505,7 @@ public class Dashboard extends javax.swing.JFrame {
         resetColor(btn_reports);
         // Abrir sección
         Principal p1 = new Principal();
-        p1.setSize(750, 430);
+        p1.setSize(850, 430);
         p1.setLocation(0,0);
         
         content.removeAll();
@@ -523,7 +523,7 @@ public class Dashboard extends javax.swing.JFrame {
         resetColor(btn_reports);
         // Abrir sección
         Lendings p1 = new Lendings();
-        p1.setSize(890, 430);
+        p1.setSize(850, 430);
         p1.setLocation(0,0);
         
         content.removeAll();
@@ -541,7 +541,7 @@ public class Dashboard extends javax.swing.JFrame {
         resetColor(btn_reports);
         // Abrir sección
         Returns p1 = new Returns();
-        p1.setSize(750, 430);
+        p1.setSize(850, 430);
         p1.setLocation(0,0);
         
         content.removeAll();
@@ -559,7 +559,7 @@ public class Dashboard extends javax.swing.JFrame {
         resetColor(btn_reports);
         // Abrir sección
         Users p1 = new Users();
-        p1.setSize(750, 430);
+        p1.setSize(850, 430);
         p1.setLocation(0,0);
         
         content.removeAll();
@@ -577,7 +577,7 @@ public class Dashboard extends javax.swing.JFrame {
         resetColor(btn_reports);
         // Abrir sección
         Articulos p1 = new Articulos();
-        p1.setSize(990, 930);
+        p1.setSize(850, 930);
         p1.setLocation(0,0);
         
         content.removeAll();
@@ -595,7 +595,7 @@ public class Dashboard extends javax.swing.JFrame {
         setColor(btn_reports);
         // Abrir sección
         Reports p1 = new Reports();
-        p1.setSize(750, 430);
+        p1.setSize(850, 430);
         p1.setLocation(0,0);
         
         content.removeAll();
