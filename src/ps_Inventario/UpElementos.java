@@ -49,6 +49,8 @@ public class UpElementos extends javax.swing.JPanel {
         stock.setText(bstock);
         available.setText(bavai);
         jLabel1.setText("Guardar");
+        
+      
     }
 
     
@@ -126,7 +128,7 @@ public class UpElementos extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Subir");
-        button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, 30));
+        button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 100, -1));
 
         add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 350, 260, 50));
 
@@ -341,7 +343,7 @@ public class UpElementos extends javax.swing.JPanel {
        if(date.getText().equals("") || date.getText() == null || date.getText().equals(" "))
         date.setText("Ingrese la Fecha de Publicación");
        if(category.getText().equals("") || category.getText() == null || category.getText().equals(" "))
-        category.setText("Ingrese la Categoría del Articulo");
+        category.setText("Ingrese la Categoría del Elemento");
        if(descr.getText().equals("") || descr.getText() == null || descr.getText().equals(" "))
         descr.setText("Ingrese la descripción del Elemento");
        if(stock.getText().equals("") || stock.getText() == null || stock.getText().equals(" "))

@@ -90,6 +90,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         slogan = new javax.swing.JLabel();
         fecha = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
@@ -217,7 +218,7 @@ public class Dashboard extends javax.swing.JFrame {
         btn_users.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Add-Male-User.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Male-User.png"))); // NOI18N
         btn_users.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, 30));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -249,7 +250,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Articulos");
+        jLabel10.setText("Elementos de Cosina");
         btn_articulos.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 30));
 
         Menu.add(btn_articulos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 250, -1));
@@ -310,8 +311,8 @@ public class Dashboard extends javax.swing.JFrame {
 
         app_name.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         app_name.setForeground(new java.awt.Color(255, 255, 255));
-        app_name.setText("Gestor");
-        Menu.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 90, -1));
+        app_name.setText("GESTOR");
+        Menu.add(app_name, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 100, -1));
 
         jSeparator1.setPreferredSize(new java.awt.Dimension(50, 5));
         Menu.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 190, 20));
@@ -484,13 +485,13 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("administración/Control/Articulos");
+        jLabel2.setText("Administración/Control/Elemento de Cosina");
         Header.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, 30));
 
         slogan.setFont(slogan.getFont().deriveFont((slogan.getFont().getStyle() & ~java.awt.Font.ITALIC) & ~java.awt.Font.BOLD, slogan.getFont().getSize()+8));
         slogan.setForeground(new java.awt.Color(255, 255, 255));
         slogan.setText("Inventario");
-        Header.add(slogan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 190, 30));
+        Header.add(slogan, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 190, 30));
 
         fecha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         fecha.setForeground(new java.awt.Color(255, 255, 255));
@@ -498,7 +499,10 @@ public class Dashboard extends javax.swing.JFrame {
         fecha.setText("Hoy es Sábado 1 de Diciembre de 2022");
         fecha.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         fecha.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
-        Header.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 440, 130));
+        Header.add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 440, 40));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/inicio-banner.png"))); // NOI18N
+        Header.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 15, 890, 150));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -534,6 +538,10 @@ public class Dashboard extends javax.swing.JFrame {
         resetColor(btn_users);
         resetColor(btn_articulos);
         resetColor(btn_reports);
+        
+        // Establece banner sección
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/inicio-banner.png"))); // NOI18N
+        Header.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 15, 890, 150));
         // Abrir sección
         Principal p1 = new Principal();
         p1.setSize(850, 430);
@@ -552,6 +560,11 @@ public class Dashboard extends javax.swing.JFrame {
         resetColor(btn_users);
         resetColor(btn_articulos);
         resetColor(btn_reports);
+        
+        // quita el banner
+        jLabel6.setIcon(new javax.swing.ImageIcon("<none>")); // NOI18N
+        Header.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 170));
+        
         // Abrir sección
         Lendings p1 = new Lendings();
         p1.setSize(850, 430);
@@ -570,10 +583,16 @@ public class Dashboard extends javax.swing.JFrame {
         resetColor(btn_users);
         resetColor(btn_articulos);
         resetColor(btn_reports);
+        
+        // quita el banner
+        jLabel6.setIcon(new javax.swing.ImageIcon("<none>")); // NOI18N
+        Header.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 170));
+        
         // Abrir sección
         Returns p1 = new Returns();
         p1.setSize(850, 430);
         p1.setLocation(0,0);
+       
         
         content.removeAll();
         content.add(p1, BorderLayout.CENTER);
@@ -588,6 +607,7 @@ public class Dashboard extends javax.swing.JFrame {
         enterColor(btn_users);
         resetColor(btn_articulos);
         resetColor(btn_reports);
+        
         // Abrir sección
        
         String c = "123";
@@ -595,6 +615,10 @@ public class Dashboard extends javax.swing.JFrame {
        
         String pass = JOptionPane.showInputDialog(null,"Ingrese la contraseña: ","Contraseña",JOptionPane.INFORMATION_MESSAGE);       
         if(c.equals(pass)){
+            
+            jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/chefs-banner.png"))); // NOI18N
+            Header.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 15, 890, 150));
+            
            Users p1 = new Users();
             p1.setSize(850, 430);
             p1.setLocation(0,0);
@@ -603,7 +627,7 @@ public class Dashboard extends javax.swing.JFrame {
             content.revalidate();
             content.repaint();
         }else{
-            JOptionPane.showMessageDialog(null, "Contraseña es Incorrecta! \n No tiene acceso a este area","ERROR",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Contraseña Incorrecta! \n No tiene acceso a este area","ERROR",JOptionPane.ERROR_MESSAGE);
         }    
        
     }//GEN-LAST:event_btn_usersMousePressed
@@ -615,6 +639,9 @@ public class Dashboard extends javax.swing.JFrame {
         resetColor(btn_users);
         enterColor(btn_articulos);
         resetColor(btn_reports);
+        
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/articulos-Banner.png"))); // NOI18N
+        Header.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 15, 890, 150));
         // Abrir sección
         Articulos p1 = new Articulos();
         p1.setSize(850, 930);
@@ -633,6 +660,11 @@ public class Dashboard extends javax.swing.JFrame {
         resetColor(btn_users);
         resetColor(btn_articulos);
         enterColor(btn_reports);
+        
+        // quita el banner
+        jLabel6.setIcon(new javax.swing.ImageIcon("<none>")); // NOI18N
+        Header.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 170));
+        
         // Abrir sección
         Reports p1 = new Reports();
         p1.setSize(850, 430);
@@ -799,6 +831,10 @@ public class Dashboard extends javax.swing.JFrame {
         resetColor(btn_reports);
         enterColor(btn_users_registarse);
         
+        // quita el banner
+        jLabel6.setIcon(new javax.swing.ImageIcon("<none>")); // NOI18N
+        Header.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 170));
+        
         UpUsers p1 = new UpUsers();
         p1.setSize(890, 430);
         p1.setLocation(0,0);
@@ -887,6 +923,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

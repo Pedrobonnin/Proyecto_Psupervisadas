@@ -87,24 +87,24 @@ public class Returns extends javax.swing.JPanel {
 
         Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Title.setText("Devolución de Elementos");
-        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
+        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         Text1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text1.setText("Descripcion");
-        add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
+        add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
 
         Text2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text2.setText("Dni Usuario");
-        add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
+        add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
 
         jSeparator1.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator1.setToolTipText("");
         jSeparator1.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 260, 10));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 260, 10));
 
         jSeparator2.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator2.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 260, 10));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 260, 10));
 
         jSeparator3.setForeground(new java.awt.Color(204, 204, 204));
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -125,7 +125,7 @@ public class Returns extends javax.swing.JPanel {
                 articulo_descActionPerformed(evt);
             }
         });
-        add(articulo_desc, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 260, 30));
+        add(articulo_desc, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 260, 30));
 
         dni.setBackground(new java.awt.Color(238, 238, 238));
         dni.setForeground(new java.awt.Color(102, 102, 102));
@@ -136,7 +136,7 @@ public class Returns extends javax.swing.JPanel {
                 dniMousePressed(evt);
             }
         });
-        add(dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 260, 30));
+        add(dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 260, 30));
 
         button.setBackground(new java.awt.Color(210, 110, 35));
         button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -159,21 +159,21 @@ public class Returns extends javax.swing.JPanel {
         jLabel1.setText(" Devolver");
         button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
 
-        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 260, 50));
+        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, 260, 50));
 
         Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/return.png"))); // NOI18N
         Image.setMaximumSize(new java.awt.Dimension(750, 430));
         Image.setMinimumSize(new java.awt.Dimension(750, 430));
-        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, -1, 320));
+        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 450, 370));
 
         comboBoxElementos.setBackground(new java.awt.Color(238, 238, 238));
-        add(comboBoxElementos, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 260, 30));
+        add(comboBoxElementos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 260, 30));
 
         jSeparator4.setForeground(new java.awt.Color(204, 204, 204));
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator4.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 10, 350));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 10, 350));
     }// </editor-fold>//GEN-END:initComponents
 
     private void articulo_descActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_articulo_descActionPerformed
@@ -214,7 +214,7 @@ public class Returns extends javax.swing.JPanel {
         String elem = mElemento.getElemento();
         
         // Conditions
-        if(dn.equals("") || artic.equals("")){
+        if(dn.equals("") || artic.equals("Ingrese el estado del elemento a devolver")){
             javax.swing.JOptionPane.showMessageDialog(this, "Debe rellenar todos los campos. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
             articulo_desc.requestFocus();
         }
@@ -271,35 +271,15 @@ public class Returns extends javax.swing.JPanel {
     
     public void Devolutions(int dn, String id_elem, int artic) throws SQLException, ParseException{
         Statement stm = reg.createStatement();
-        int days = -1;
         System.out.println(artic);
-        boolean ready = false;
-        do{
-            ResultSet re = stm.executeQuery("SELECT * FROM `lendings` WHERE `articulo_id` = '"+id_elem+"' AND `user_id` = '"+dn+"'");
-            if(re.next()){
-                Date ahora = new Date();
-                Date returned = deStringToDate(re.getString("date_return"));
-                days = diferenciasDeFechas(ahora, returned);                
-            }
-            ready = true;
-            re.close();
-        }while(!ready);
-        if(ready){
-            
-            
-            stm.executeUpdate("DELETE FROM `lendings` WHERE `articulo_id` = '"+ id_elem +"' AND `user_id` = '"+ dn +"'");
-            stm.executeUpdate("UPDATE `articulos` SET `available` = available+1, `description` = '"+ artic +"' WHERE `id` = '"+ id_elem +"';");
-            if(days <= 0){
-                int money = 0;
-                money = days * -1;
-                int cost = 5;// Costo por día retardado.
-                money = money * cost;
-                stm.executeUpdate("UPDATE `users` SET `sanctions` = sanctions+1, `sanc_money` = sanc_money+'"+ money +"' WHERE `id` = '"+ dn +"';");
-                javax.swing.JOptionPane.showMessageDialog(this, "¡SANCIONADO POR ENTREGA A DESTIEMPO! ($"+money+") \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-            }
-            javax.swing.JOptionPane.showMessageDialog(this, "¡Devolución realizada correctamente! \n", "HECHO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-            
-        }
+      
+           
+        stm.executeUpdate("DELETE FROM `lendings` WHERE `articulo_id` = '"+ id_elem +"' AND `user_id` = '"+ dn +"'");
+        stm.executeUpdate("UPDATE `articulos` SET `available` = available+1, `description` = '"+ artic +"' WHERE `id` = '"+ id_elem +"';");
+        
+        javax.swing.JOptionPane.showMessageDialog(this, "¡Devolución realizada correctamente! \n", "HECHO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+
+        
         stm.close();
 
     }

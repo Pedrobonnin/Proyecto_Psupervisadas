@@ -38,8 +38,6 @@ public class Principal extends javax.swing.JPanel {
 
         int year = Double.valueOf(edadEnDias / 365.25d).intValue();
         int dias = Double.valueOf(edadEnDias % 365.25d).intValue();
-
-        System.out.println(String.format("%d años y %d días", year, dias));
         años.setText("Años: "+year+ "\n"+" y \n" +dias+ " Dias ");
     }
     

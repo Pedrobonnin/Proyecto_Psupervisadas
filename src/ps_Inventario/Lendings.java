@@ -79,24 +79,24 @@ public final class Lendings extends javax.swing.JPanel {
 
         Title.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Title.setText("Nuevo Préstamo");
-        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+        add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, -1, -1));
 
         Text1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text1.setText("Eliga un Elemento a Retirar");
-        add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, -1, -1));
+        add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 180, -1, -1));
 
         Text2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text2.setText("Dni Usuario");
-        add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 50, -1, -1));
+        add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, -1, -1));
 
         jSeparator2.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator2.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 260, 10));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 260, 10));
 
         jSeparator3.setForeground(new java.awt.Color(204, 204, 204));
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 30, 10, 350));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 27, 10, 360));
 
         dni.setBackground(new java.awt.Color(238, 238, 238));
         dni.setForeground(new java.awt.Color(102, 102, 102));
@@ -112,7 +112,7 @@ public final class Lendings extends javax.swing.JPanel {
                 dniActionPerformed(evt);
             }
         });
-        add(dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 260, 30));
+        add(dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 260, 30));
 
         button.setBackground(new java.awt.Color(210, 110, 35));
         button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -135,20 +135,20 @@ public final class Lendings extends javax.swing.JPanel {
         jLabel1.setText("Prestar");
         button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
 
-        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, 260, 50));
+        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 260, 50));
 
         Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Image.setIcon(new javax.swing.ImageIcon("G:\\Proyecto_Psupervisadas\\src\\ps_Inventario\\images\\Prestamo.png")); // NOI18N
+        Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Prestamo.png"))); // NOI18N
         Image.setMaximumSize(new java.awt.Dimension(750, 430));
         Image.setMinimumSize(new java.awt.Dimension(750, 430));
-        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 290, -1));
+        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 440, 370));
 
-        add(comboBoxElementos, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 260, 30));
+        add(comboBoxElementos, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 260, 30));
 
         jSeparator4.setForeground(new java.awt.Color(204, 204, 204));
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator4.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 10, 350));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 27, 10, 360));
     }// </editor-fold>//GEN-END:initComponents
 
     private void dniMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dniMousePressed
@@ -203,11 +203,7 @@ public final class Lendings extends javax.swing.JPanel {
                 javax.swing.JOptionPane.showMessageDialog(this, "No existe ningún usuario con ese dni. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
                  dni.requestFocus();
             }
-            // Verificamos el libro
-            //else if(!Articulo(artic)){
-            //    javax.swing.JOptionPane.showMessageDialog(this, "No existe ningún libro con esa ID. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
-            //     articulo_id.requestFocus();
-            //}
+           
             else if(CheckLending(intdn, id_elem)){
                 javax.swing.JOptionPane.showMessageDialog(this, "Esa persona ya cuenta con el préstamo de ese mismo elementos. \n", "AVISO", javax.swing.JOptionPane.INFORMATION_MESSAGE);
                 
@@ -304,32 +300,7 @@ public final class Lendings extends javax.swing.JPanel {
         return res;
     }
     
-    public boolean CheckSanction(int userid, String articuloid) throws SQLException, ParseException{
-        boolean res = false;
-        Statement stm = reg.createStatement();
-        ResultSet re = stm.executeQuery("SELECT * FROM `lendings` WHERE `id` = '"+articuloid+"' AND `user_id` = '"+userid+"'");
-        System.out.println("1");
-        if(re.next()){
-            System.out.println("2");
-            Date ahora = new Date();
-            Date returned = deStringToDate(re.getString("date_return"));
-            System.out.println("2");
-            int days = diferenciasDeFechas(returned, ahora);
-            System.out.println("3");
-            System.out.println(days);
-            int days2 = diferenciasDeFechas(ahora, returned);
-            System.out.println(days2);
-            if(days <= 0)
-                res = true;
-            System.out.println("4");
-        }
-        System.out.println("5");
-        
-        stm.close();
-        re.close();
-        
-        return res; 
-    }
+   
     
     public boolean CheckLending(int userid, int articuloid) throws SQLException{
         boolean res = false;

@@ -10,14 +10,15 @@
 
 <p align="center">
   <kbd>
-    <img src="https://i.ibb.co/ngb5Fz1/Imagen1.png"></img>
-    <img src="https://i.ibb.co/Fb5jzqD/Imagen2.png"></img>
-    <img src="https://i.ibb.co/cDkTQp0/Imagen3.png"></img>
-    <img src="https://i.ibb.co/Db7MbL2/Imagen4.png"></img>
-    <img src="https://i.ibb.co/hLpVJ3g/Imagen5.png"></img>
-    <img src="https://i.ibb.co/3N3H5LZ/Imagen6.png"></img>
-    <img src="https://i.ibb.co/3fPvLTG/Imagen7.png"></img>
-    <img src="https://i.ibb.co/87fjj12/Imagen8.png"></img>
+    <img src="https://i.postimg.cc/Jh20f5HK/inicio.jpg"></img>
+    <img src="https://i.postimg.cc/fTNnRSxK/prestamos.jpg"></img>
+    <img src="https://i.postimg.cc/VvyyMd2z/devolucion.jpg"></img>
+    <img src="https://i.postimg.cc/9fMjj3GH/control-de-ingreso.jpg"></img>
+    <img src="https://i.postimg.cc/9Fd2dYWK/control-de-ingreso-fallido-jpg.jpg"></img>
+    <img src="https://i.postimg.cc/kGPZGLt4/usuarios.jpg"></img>
+    <img src="https://i.postimg.cc/xd7BDXfL/elementos.jpg"></img>
+    <img src="https://i.postimg.cc/9XTH2Yq0/nuevo-elemento.jpg"></img>
+    <img src="https://i.postimg.cc/cCfpcdNw/editar-elemento.jpg"></img>
   </kbd>
 </p>
 

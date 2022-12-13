@@ -55,7 +55,7 @@ public class Articulos extends javax.swing.JPanel {
         body = new javax.swing.JPanel();
         Title = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        bid = new javax.swing.JTextField();
+        bname = new javax.swing.JTextField();
         button = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -120,22 +120,22 @@ public class Articulos extends javax.swing.JPanel {
         jSeparator2.setPreferredSize(new java.awt.Dimension(250, 10));
         add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 580, 20));
 
-        bid.setBackground(new java.awt.Color(238, 238, 238));
-        bid.setForeground(new java.awt.Color(102, 102, 102));
-        bid.setText("Ingrese el ID del Elemento a buscar");
-        bid.setBorder(null);
-        bid.setSelectionColor(new java.awt.Color(248, 130, 41));
-        bid.addMouseListener(new java.awt.event.MouseAdapter() {
+        bname.setBackground(new java.awt.Color(238, 238, 238));
+        bname.setForeground(new java.awt.Color(102, 102, 102));
+        bname.setText("Ingrese el nombre del Elemento a buscar");
+        bname.setBorder(null);
+        bname.setSelectionColor(new java.awt.Color(248, 130, 41));
+        bname.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                bidMousePressed(evt);
+                bnameMousePressed(evt);
             }
         });
-        bid.addActionListener(new java.awt.event.ActionListener() {
+        bname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bidActionPerformed(evt);
+                bnameActionPerformed(evt);
             }
         });
-        add(bid, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 580, 30));
+        add(bname, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 580, 30));
 
         button.setBackground(new java.awt.Color(18, 90, 173));
         button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -272,10 +272,10 @@ public class Articulos extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 850, 300));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bidMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bidMousePressed
-       if(bid.getText().equals("Ingrese el ID del Elemento a buscar"))
-        bid.setText("");
-    }//GEN-LAST:event_bidMousePressed
+    private void bnameMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bnameMousePressed
+       if(bname.getText().equals("Ingrese el nombre del Elemento a buscar"))
+        bname.setText("");
+    }//GEN-LAST:event_bnameMousePressed
 
     private void buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseEntered
         setColorNuevo(button);
@@ -335,8 +335,8 @@ public class Articulos extends javax.swing.JPanel {
     }//GEN-LAST:event_deleteMouseExited
 
     private void jTable1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MousePressed
-        if(bid.getText().equals("") || bid.getText() == null || bid.getText().equals(" "))
-            bid.setText("Ingrese el ID del Elemento a buscar");
+        if(bname.getText().equals("") || bname.getText() == null || bname.getText().equals(" "))
+            bname.setText("Ingrese el ID del Elemento a buscar");
     }//GEN-LAST:event_jTable1MousePressed
     // BORRAR
     private void deleteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMousePressed
@@ -462,16 +462,16 @@ public class Articulos extends javax.swing.JPanel {
     // BUSCAR
     private void buttonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMousePressed
         try {
-            String inf = bid.getText();
+            String inf = bname.getText();
             Statement stm = reg.createStatement();
-            ResultSet counter = stm.executeQuery("SELECT * FROM `articulos` WHERE id LIKE '"+inf+"%'");
+            ResultSet counter = stm.executeQuery("SELECT * FROM `articulos` WHERE elemento LIKE '"+inf+"%'");
             
             int count = 0;
             while(counter.next()){count++;}
             
             String list[][] = new String[count][12];
             int i = 0;
-            ResultSet re = stm.executeQuery("SELECT * FROM `articulos` WHERE id LIKE '"+inf+"%'");
+            ResultSet re = stm.executeQuery("SELECT * FROM `articulos` WHERE elemento LIKE '"+inf+"%'");
             while(re.next()){
             list[i][0] = re.getString("id");
             list[i][1] = re.getString("elemento");
@@ -493,9 +493,9 @@ public class Articulos extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_buttonMousePressed
 
-    private void bidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bidActionPerformed
+    private void bnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bidActionPerformed
+    }//GEN-LAST:event_bnameActionPerformed
 
     private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
         setColorNuevo(nuevo);
@@ -556,7 +556,7 @@ public class Articulos extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Title;
-    private javax.swing.JTextField bid;
+    private javax.swing.JTextField bname;
     private javax.swing.JPanel body;
     private javax.swing.JPanel button;
     private javax.swing.JPanel delete;
