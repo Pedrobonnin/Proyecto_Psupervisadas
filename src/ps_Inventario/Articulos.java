@@ -103,10 +103,10 @@ public class Articulos extends javax.swing.JPanel {
         });
         nuevo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/add-to-database-5.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/add-to-database.png"))); // NOI18N
         nuevo.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 5, -1, -1));
 
-        add(nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 90, 30));
+        add(nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 90, 30));
 
         body.setBackground(new java.awt.Color(255, 255, 255));
         body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -158,9 +158,9 @@ public class Articulos extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Buscar");
-        button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
+        button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 5, 60, 20));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/search-database-5.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/search-database.png"))); // NOI18N
         jLabel5.setText("jLabel5");
         button.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 5, 30, -1));
 
@@ -192,7 +192,7 @@ public class Articulos extends javax.swing.JPanel {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/edit-base.png"))); // NOI18N
         edit.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 5, -1, -1));
 
-        add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 90, 30));
+        add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, 90, 30));
 
         delete.setBackground(new java.awt.Color(153, 9, 0));
         delete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -216,10 +216,10 @@ public class Articulos extends javax.swing.JPanel {
         jLabel4.setText("Borrar");
         delete.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/remove-from-database-5.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/remove-from-database.png"))); // NOI18N
         delete.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 5, -1, -1));
 
-        add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, 90, 30));
+        add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 400, 90, 30));
 
         jTable1.setBackground(new java.awt.Color(238, 238, 238));
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N

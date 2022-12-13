@@ -107,7 +107,7 @@ public class UpElementos extends javax.swing.JPanel {
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
         add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 10, 310));
 
-        button.setBackground(new java.awt.Color(18, 90, 173));
+        button.setBackground(new java.awt.Color(210, 110, 35));
         button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -128,7 +128,7 @@ public class UpElementos extends javax.swing.JPanel {
         jLabel1.setText("Subir");
         button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, 30));
 
-        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 360, 260, 50));
+        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 350, 260, 50));
 
         Text3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text3.setText("Articulo ID");
@@ -538,10 +538,10 @@ public class UpElementos extends javax.swing.JPanel {
     }//GEN-LAST:event_buttonMousePressed
 
     void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+        panel.setBackground(new Color(248, 130, 41));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(new Color(210, 110, 35));
     }
     
     public void InsertArticulo(String elem, String fech, String cate, String desc, int stck, int avai) throws SQLException{

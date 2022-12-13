@@ -138,7 +138,7 @@ public class Returns extends javax.swing.JPanel {
         });
         add(dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 260, 30));
 
-        button.setBackground(new java.awt.Color(18, 90, 173));
+        button.setBackground(new java.awt.Color(210, 110, 35));
         button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -162,7 +162,7 @@ public class Returns extends javax.swing.JPanel {
         add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 260, 50));
 
         Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/iStock.jpg"))); // NOI18N
+        Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/return.png"))); // NOI18N
         Image.setMaximumSize(new java.awt.Dimension(750, 430));
         Image.setMinimumSize(new java.awt.Dimension(750, 430));
         add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, -1, 320));
@@ -306,10 +306,10 @@ public class Returns extends javax.swing.JPanel {
     
     
     void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+        panel.setBackground(new Color(248, 130, 41));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(new Color(210, 110, 35));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

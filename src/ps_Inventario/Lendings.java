@@ -66,6 +66,7 @@ public final class Lendings extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         Image = new javax.swing.JLabel();
         comboBoxElementos = new javax.swing.JComboBox<>();
+        jSeparator4 = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(238, 238, 238));
         setMinimumSize(new java.awt.Dimension(750, 430));
@@ -82,20 +83,20 @@ public final class Lendings extends javax.swing.JPanel {
 
         Text1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text1.setText("Eliga un Elemento a Retirar");
-        add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, -1, -1));
+        add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, -1, -1));
 
         Text2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Text2.setText("Dni Usuario");
-        add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 50, -1, -1));
+        add(Text2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 50, -1, -1));
 
         jSeparator2.setForeground(new java.awt.Color(248, 130, 41));
         jSeparator2.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 110, 260, 10));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 260, 10));
 
         jSeparator3.setForeground(new java.awt.Color(204, 204, 204));
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
         jSeparator3.setPreferredSize(new java.awt.Dimension(200, 10));
-        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 10, 350));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 30, 10, 350));
 
         dni.setBackground(new java.awt.Color(238, 238, 238));
         dni.setForeground(new java.awt.Color(102, 102, 102));
@@ -111,9 +112,9 @@ public final class Lendings extends javax.swing.JPanel {
                 dniActionPerformed(evt);
             }
         });
-        add(dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 80, 260, 30));
+        add(dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 260, 30));
 
-        button.setBackground(new java.awt.Color(18, 90, 173));
+        button.setBackground(new java.awt.Color(210, 110, 35));
         button.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         button.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -134,15 +135,20 @@ public final class Lendings extends javax.swing.JPanel {
         jLabel1.setText("Prestar");
         button.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, -1));
 
-        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 260, 50));
+        add(button, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, 260, 50));
 
         Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/prestamo.gif"))); // NOI18N
+        Image.setIcon(new javax.swing.ImageIcon("G:\\Proyecto_Psupervisadas\\src\\ps_Inventario\\images\\Prestamo.png")); // NOI18N
         Image.setMaximumSize(new java.awt.Dimension(750, 430));
         Image.setMinimumSize(new java.awt.Dimension(750, 430));
-        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -150, 630, -1));
+        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 290, -1));
 
-        add(comboBoxElementos, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 260, 30));
+        add(comboBoxElementos, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 260, 30));
+
+        jSeparator4.setForeground(new java.awt.Color(204, 204, 204));
+        jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jSeparator4.setPreferredSize(new java.awt.Dimension(200, 10));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 20, 10, 350));
     }// </editor-fold>//GEN-END:initComponents
 
     private void dniMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dniMousePressed
@@ -246,10 +252,10 @@ public final class Lendings extends javax.swing.JPanel {
     
    
     void setColor(JPanel panel){
-        panel.setBackground(new Color(21,101,192));
+        panel.setBackground(new Color(248, 130, 41));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(new Color(210,110,35));
     }
     
     
@@ -432,5 +438,6 @@ public final class Lendings extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     // End of variables declaration//GEN-END:variables
 }

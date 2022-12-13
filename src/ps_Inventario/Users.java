@@ -119,9 +119,9 @@ public class Users extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Buscar");
-        search.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
+        search.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 5, 60, 20));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Search-Male-User-5.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Search-Male-User.png"))); // NOI18N
         search.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 30, 30));
 
         add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 100, 30));
@@ -149,10 +149,10 @@ public class Users extends javax.swing.JPanel {
         jLabel1.setText("Borrar");
         delete.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Remove-Male-User-5.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Remove-Male-User.png"))); // NOI18N
         delete.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 5, -1, -1));
 
-        add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, 90, 30));
+        add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 400, 90, 30));
 
         edit.setBackground(new java.awt.Color(5, 115, 0));
         edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -176,10 +176,10 @@ public class Users extends javax.swing.JPanel {
         jLabel2.setText("Editar");
         edit.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Edit-Male-User-5.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Edit-Male-User.png"))); // NOI18N
         edit.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 5, -1, -1));
 
-        add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 90, 30));
+        add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, 90, 30));
 
         nuevo.setBackground(new java.awt.Color(18, 90, 173));
         nuevo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -216,10 +216,10 @@ public class Users extends javax.swing.JPanel {
         });
         nuevo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 5, 60, 20));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Add-Male-User-5.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/Add-Male-User.png"))); // NOI18N
         nuevo.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 5, -1, -1));
 
-        add(nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 400, 90, 30));
+        add(nuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 90, 30));
 
         jTable1.setBackground(new java.awt.Color(238, 238, 238));
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N

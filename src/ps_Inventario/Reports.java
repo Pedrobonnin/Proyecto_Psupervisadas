@@ -60,7 +60,8 @@ public class Reports extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(750, 430));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonSinEntregar.setBackground(new java.awt.Color(18, 90, 173));
+        buttonSinEntregar.setBackground(new java.awt.Color(210, 110, 35));
+        buttonSinEntregar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         buttonSinEntregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         buttonSinEntregar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -92,7 +93,7 @@ public class Reports extends javax.swing.JPanel {
         });
         buttonSinEntregar.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 30));
 
-        add(buttonSinEntregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, 140, 30));
+        add(buttonSinEntregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 390, 140, 30));
 
         body.setBackground(new java.awt.Color(255, 255, 255));
         body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -127,7 +128,7 @@ public class Reports extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "User ID", "Articulo ID", "Fecha de Salida", "Fecha de Entrega"
+                " Dni", "Elemento", "Fecha de Salida", "Fecha de Entrega"
             }
         ) {
             Class[] types = new Class [] {
@@ -157,7 +158,8 @@ public class Reports extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 850, 330));
 
-        buttonActualizar.setBackground(new java.awt.Color(18, 90, 173));
+        buttonActualizar.setBackground(new java.awt.Color(210, 110, 35));
+        buttonActualizar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         buttonActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         buttonActualizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -176,6 +178,7 @@ public class Reports extends javax.swing.JPanel {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Todo");
+        jLabel2.setPreferredSize(new java.awt.Dimension(44, 30));
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel2MouseEntered(evt);
@@ -189,7 +192,7 @@ public class Reports extends javax.swing.JPanel {
         });
         buttonActualizar.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 30));
 
-        add(buttonActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 390, 140, 30));
+        add(buttonActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 390, 140, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTable1InputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jTable1InputMethodTextChanged
@@ -261,10 +264,10 @@ public class Reports extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel2MouseEntered
 
     void setColor(JPanel panel){
-        panel.setBackground(new Color(210, 110, 35));
+        panel.setBackground(new Color(248, 130, 41));
     }
     void resetColor(JPanel panel){
-        panel.setBackground(new Color(18,90,173));
+        panel.setBackground(new Color(210, 110, 35));
     }
     
     private void GetReports() throws SQLException{

@@ -4,6 +4,12 @@
  * and open the template in the editor.
  */
 package ps_Inventario;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -16,7 +22,30 @@ public class Principal extends javax.swing.JPanel {
      */
     public Principal() {
         initComponents();
+        
+        LocalDate now = LocalDate.now();
+        int yearActual = now.getYear();
+            
+        
+        
+        año.setText(""+yearActual);  
+        
+        Calendar fechaFundacion = new GregorianCalendar(1911, 4, 17);
+        Calendar ahora = Calendar.getInstance();
+
+        long edadEnDias = (ahora.getTimeInMillis() - fechaFundacion.getTimeInMillis())
+                                / 1000 / 60 / 60 / 24;
+
+        int year = Double.valueOf(edadEnDias / 365.25d).intValue();
+        int dias = Double.valueOf(edadEnDias % 365.25d).intValue();
+
+        System.out.println(String.format("%d años y %d días", year, dias));
+        años.setText("Años: "+year+ "\n"+" y \n" +dias+ " Dias ");
     }
+    
+   
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -33,15 +62,17 @@ public class Principal extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        Image = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        Image1 = new javax.swing.JLabel();
+        año = new javax.swing.JLabel();
+        años = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(238, 238, 238));
         setMinimumSize(new java.awt.Dimension(750, 430));
         setPreferredSize(new java.awt.Dimension(750, 430));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -55,24 +86,20 @@ public class Principal extends javax.swing.JPanel {
         add(Title, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         Text1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Text1.setText("Sistema de Gestión para Biblioteca Pública. Controle y administre de");
+        Text1.setText("Sistema de Gestión para E.E.T N°1. Control y administracion de");
         add(Text1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("forma óptima y fácil el flujo de préstamos y devoluciones de Libros. ");
+        jLabel1.setText("forma óptima y fácil el flujo de préstamos y devoluciones de Elementos de gastronomia. ");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("Esta herramienta le permitirá llevar un control completo y detallado de su Biblioteca,");
+        jLabel2.setText("Esta herramienta le permitirá llevar un control completo y detallado de su Inventario.");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("tendrá acceso a herramientas especiales para tareas específicas, como lo son:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
-
-        Image.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/336799ebb339821f342bc5a13386aff2.jpg"))); // NOI18N
-        add(Image, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 80, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("• Sección de Reportes de acciones en el sistema");
@@ -87,23 +114,39 @@ public class Principal extends javax.swing.JPanel {
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 170, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel7.setText("• Registro de Usuarios y Libros Nuevos");
+        jLabel7.setText("• Registro de Usuarios y Elementos Nuevos");
         add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 320, -1));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel8.setText("• Edición de Usuarios y Libros existentes");
+        jLabel8.setText("• Edición de Usuarios y Elementos existentes");
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 330, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setText("• Eliminar todo tipo de Registros");
         add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 330, -1));
+
+        Image1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Image1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ps_Inventario/images/escudo2.png"))); // NOI18N
+        add(Image1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 120, -1, -1));
+
+        año.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        año.setForeground(new java.awt.Color(0, 109, 167));
+        año.setText("1911");
+        add(año, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 380, 40, 20));
+
+        años.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        años.setForeground(new java.awt.Color(0, 109, 167));
+        años.setText("Años: 111");
+        add(años, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 400, 150, 20));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Image;
+    private javax.swing.JLabel Image1;
     private javax.swing.JLabel Text1;
     private javax.swing.JLabel Title;
+    private javax.swing.JLabel año;
+    private javax.swing.JLabel años;
     private javax.swing.JPanel body;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
