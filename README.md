@@ -2,7 +2,7 @@
 ## Features
 ✔️ Interfaz gráfica con estilo Material Design.\
 ✔️ Conexión a la base de datos SQLite.\
-✔️ Gestión de Elemento de cosina, préstamos y devoluciones.\
+✔️ Gestión de Elemento de cocina, préstamos y devoluciones.\
 ✔️ Registros de movimiento.\
 ✔️ Tablas de consulta.
 
